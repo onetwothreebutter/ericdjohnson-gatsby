@@ -1,0 +1,18 @@
+@import typography
+
+@mixin site__ol-or-ul-list()
+  @include site__paragraph-font()
+  max-width: 560px
+  margin: auto
+
+.site__ol-or-ul-list
+  @include site__ol-or-ul-list()
+
+
+
+@mixin site__list-item()
+  @include site__paragraph-font()
+  margin-bottom: 30px
+
+.site__list-item
+  @include site__list-item()

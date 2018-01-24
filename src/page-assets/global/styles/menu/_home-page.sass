@@ -1,0 +1,93 @@
+@import ../colors
+@import ../breakpoints
+
+
+//homepage menu breakpoints
+$menu-fixed-size: 622px
+
+.home-page
+  .menu
+    display: flex
+    justify-content: center
+    @media screen and (max-width: $mobile-portrait)
+      justify-content: space-around
+      position: relative
+      top: 15vh
+
+  .menu-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin: 0 10px
+    text-align: center
+    align-self: flex-start
+    text-decoration: none
+    color: $baby-blue
+    &:hover
+      .menu-item__heading,
+      .menu-item__mobile-heading
+        color: $light-gray
+        &:before
+          color: $baby-blue
+          box-shadow: inset 0 0 10px 50px
+      .menu-item__sub-text
+        transform: scale(1.3)
+
+
+  @mixin menu-item__heading()
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 16px
+    width: 60px
+    height: 60px
+    margin-bottom: 10px
+    text-transform: uppercase
+    &:before
+      content: ''
+      position: absolute
+      box-shadow: inset 0 0 0 4px
+      border-radius: 50%
+      height: 100%
+      width: 100%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: 0.3s
+      z-index: -1
+    @media screen and (max-width: $menu-fixed-size)
+      width: 7.5vw
+      height: 7.5vw
+      font-size: calc(3vw * 0.8)
+      &:before
+        box-shadow: inset 0 0 0 2px
+    @media screen and (max-width: $mobile-portrait)
+      font-size: 3vw
+
+  .menu-item__heading
+    @include menu-item__heading()
+
+  .menu-item__mobile-heading
+    @include menu-item__heading()
+    display: none
+
+
+  .menu-item__sub-text
+    display: block
+    font-size: 10px
+    text-transform: uppercase
+    transition: 0.3s
+
+  .mobile-nav
+    display: none
+
+  @media screen and (max-width: $mobile-portrait)
+    .menu-item__mobile-heading + .menu-item__heading
+      display: none
+    .menu-item__sub-text
+      display: none
+    .menu-item__mobile-heading
+      display: flex
+

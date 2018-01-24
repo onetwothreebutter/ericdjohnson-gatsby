@@ -1,0 +1,102 @@
+@import ../../global/styles/typography
+@import ../../global/styles/colors
+@import ../../global/styles/page-layout
+@import ../../global/styles/breakpoints
+@import ../../global/styles/menu/home-page
+@import easter-egg
+@import glitchy-eric
+
+
+//homepage breakpoints
+$subheading-font-size: 500px
+
+
+body
+  height: 100vh
+
+.homepage-background,
+.homepage-background-helper
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: -1
+  background-image: url(../images/eric-and-elwood-2.jpg)
+  background-size: cover
+  background-position: center top
+  transition: 1s linear
+  filter: blur(0)
+.homepage-background
+  z-index: 0
+//if brandonprinted loads or fails to load, show the banner/menu
+.wf-brandonprinted-n4-active, .wf-brandonprinted-n4-inactive
+  .-text-in-focus
+    .homepage-background
+      filter: blur(8px)
+
+.homepage-container
+  height: 100vh
+  overflow: hidden
+
+.homepage-scaling-container
+  filter: blur(13px)
+  transform: scale(1.3)
+  opacity: 0
+  transition: 1s cubic-bezier(0.42, 0, 0, 0.99)
+//if brandonprinted loads or fails to load, show the banner/menu
+.wf-brandonprinted-n4-active, .wf-brandonprinted-n4-inactive
+  .-text-in-focus
+    .homepage-scaling-container
+      filter: blur(0)
+      opacity: 1
+      transform: scale(1)
+
+
+.homepage-banner
+  padding: 30px 0 60px 0
+  text-align: center
+  color: $baby-blue
+
+.homepage-banner__heading
+  margin: 0
+  font-size: 138px
+  font-family: $brandon-printed
+  line-height: 1em
+  @media screen and (max-width: $tablet-portrait)
+    font-size: 16vw
+
+.homepage-banner__subheading
+  max-width: 800px
+  margin: auto
+  font-size: 36px
+  font-family: $brandon-printed
+  @media screen and (max-width: $subheading-font-size)
+    font-size: 8vw
+
+
+.photo-focus
+  position: absolute
+  bottom: 14px
+  right: 20px
+  width: 8em
+  height: 2em
+  z-index: 1
+  text-align: right
+
+.photo-focus__button
+  position: absolute
+  right: 0
+  bottom: 0
+  color: white
+  background: none
+  border: none
+  opacity: 0
+  z-index: 0
+  transition: 0.3s
+  outline: none
+  &.-active
+    opacity: 1
+    z-index: 1
+  &:hover
+    text-shadow: 0 0 10px

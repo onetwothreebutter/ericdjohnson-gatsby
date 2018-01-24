@@ -1,0 +1,121 @@
+@import breakpoints
+
+
+
+@font-face
+  font-family: 'BrandonPrinted'
+  src: url(../../global/fonts/brandonprinted-one-webfont.eot)
+  src: url(../../global/fonts/brandonprinted-one-webfont.eot?#iefix) format('embedded-opentype'), url(../../global/fonts/brandonprinted-one-webfont.woff) format('woff'), url(../../global/fonts/brandonprinted-one-webfont.ttf) format('truetype')
+  font-weight: 500
+  font-style: normal
+  font-variant: normal
+
+$brandon-printed: 'BrandonPrinted', sans-serif
+$dancing-script: 'Dancing Script', 'Arial', sans-serif
+$ledger: 'Ledger', 'Times', serif
+
+*
+  font-family: Arial, Helvetica, sans-serif
+
+h1
+  margin-top: 0
+
+h2
+  margin-top: 0
+  color: rgb(56, 56, 56)
+
+h3
+  margin-top: 0
+  color: rgb(56, 56, 56)
+
+code
+  background: #eff0f1
+  padding: 1px 8px
+  font-size: 19px
+
+
+
+/*** Fonts ***/
+
+@mixin site__heading-font()
+  font-size: 40px
+
+@mixin site__paragraph-font()
+  font-family: $ledger
+  font-size: 20px
+  line-height: 1.6
+
+
+
+/*** Text groups ***/
+
+@mixin site__banner-text()
+  @include site__heading-font()
+  max-width: 400px
+
+.site__banner-text
+  @include site__banner-text()
+
+
+
+@mixin site__paragraph-text()
+  @include site__paragraph-font()
+  max-width: 700px
+  margin: 40px auto
+  text-align: left
+
+.site__paragraph-text
+  @include site__paragraph-text()
+
+
+
+@mixin site__paragraph-link()
+  @include site__paragraph-font()
+
+.site__paragraph-link
+  @include site__paragraph-link()
+
+
+
+@mixin site__section-heading()
+  @include site__heading-font()
+  font-size: 70px
+  margin-bottom: -10px
+  font-family: "Dancing Script", Arial, sans-serif
+  text-align: center
+  @media screen and (max-width: $mobile-portrait)
+    font-size: 50px
+    line-height: 1.2
+
+.site__section-heading
+  @include site__section-heading()
+
+
+@mixin site__blockquote()
+  margin: auto
+  max-width: 500px
+  font-family: $ledger
+  font-size: 18px
+
+.site__blockquote
+  @include site__blockquote()
+
+
+@mixin site__cite()
+  display: block
+  font-size: 14px
+  margin-top: 10px
+
+.site__cite
+  @include site__cite()
+
+
+@mixin site__book-title()
+  @include site__paragraph-font()
+  font-style: italic
+
+.site__book-title
+  @include site__book-title()
+
+
+

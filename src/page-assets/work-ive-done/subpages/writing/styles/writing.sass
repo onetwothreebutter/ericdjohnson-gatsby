@@ -1,0 +1,52 @@
+@import ../../../../styles/sass/work-ive-done-subpages-base
+
+
+
+.work-example-banner
+  background-image: url(/src/pages/work-ive-done/subpages/writing/images/op-ed-oct-2016--banner.png)
+  background-position: center top
+
+
+.work-example-banner__heading
+  @include site__banner-heading(#5a5959)
+
+
+
+.news-item
+  display: block
+  text-align: center
+  margin-bottom: 60px
+
+.news-item__thumbnail
+  width: 450px
+  margin-bottom: 10px
+  box-shadow: 0 0 10px gray
+  transition: 0.3s
+  .-first-step &
+    width: 200px
+  .-climate-march &
+    width: 260px
+  &:hover
+    transform: scale(1.05)
+
+.news-item__title
+  display: block
+
+
+.letter-to-editor__paragraph-text
+  @include site__paragraph-text()
+  position: relative
+  text-align: center
+
+.letter-item__thumbnail
+  @include site__image-zoom(rotate(-2deg))
+  width: 130px
+  &.-more-coverage
+    transform: rotate(-2deg)
+  &.-school-board
+    width: 180px
+    margin: 0 0 -140px -140px
+    transform: rotate(-1deg)
+  &.-supervisors
+    width: 280px
+    transform: rotate(2deg)

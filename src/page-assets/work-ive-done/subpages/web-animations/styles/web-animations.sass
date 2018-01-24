@@ -1,0 +1,41 @@
+@import ../../../styles/work-ive-done-subpages-base
+@import ../../../../global/styles/codepen
+@import ../../../../global/styles/html5-video
+
+
+
+.work-example-banner
+  background-image: url(../images/newtons-cradle.png)
+  background-color: #f3f3f3
+  &:before
+    background-color: rgba(90, 89, 89, 0.07)
+
+.web-animations__heading
+  @include site__banner-heading(#5a5959)
+
+.web-animations__codepen-embed
+  @include site__codepen-embed
+  position: relative
+  margin-bottom: 40px
+  &:hover
+    .web-animations__instructions
+      opacity: 1
+
+.web-animations__instructions
+  position: absolute
+  top: -25px
+  width: 100%
+  text-align: center
+  font-size: 20px
+  color: #00b4ff
+  opacity: 0
+  transition: 0.3s
+
+.convergence-logo
+  @include code-pen-width()
+
+.cornerstone-product-wheel
+  @include code-pen-width()
+
+
+

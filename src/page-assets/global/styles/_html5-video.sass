@@ -1,0 +1,25 @@
+@import breakpoints
+
+
+
+@mixin site__video-embed()
+  display: block
+  max-width: 600px
+  margin: auto
+  cursor: pointer
+  @media screen and (max-width: $tablet-portrait)
+    max-width: 100%
+
+.site__video-embed
+  @include site__video-embed()
+
+
+
+@mixin site__video-instructions()
+  opacity: 0
+  transition: 0.3s
+  .-autoplay-not-supported &
+    opacity: 1
+
+.site__video-instructions
+  @include site__video-instructions()

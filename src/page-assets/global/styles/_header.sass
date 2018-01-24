@@ -1,0 +1,31 @@
+@import ../styles/typography
+@import ../styles/colors
+@import ../styles/page-layout
+@import ../styles/breakpoints
+
+
+header
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.33)
+  border-bottom: 1px solid rgba(183, 183, 183, 0.2)
+
+.header__page-width
+  @include site__page-width()
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  padding: 0 30px
+
+.logo
+  position: relative
+  font-family: $brandon-printed
+  font-size: 20px
+  color: $red
+  white-space: nowrap
+  text-decoration: none
+  &:hover
+    cursor: pointer
+
+@media screen and (max-width: $menu-switch-to-mobile)
+  .logo
+    margin: auto

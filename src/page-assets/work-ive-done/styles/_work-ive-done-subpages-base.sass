@@ -1,0 +1,49 @@
+@import ../../global/styles/page-layout
+@import ../../global/styles/typography
+@import ../../global/styles/images
+@import ../../global/styles/lists
+@import ../../global/styles/menu/regular-page
+@import ../../global/styles/banner
+@import ../../global/styles/codepen
+@import ../../global/styles/buttons
+
+
+
+.work-example-banner__page-width
+  @include site__page-width()
+  position: relative
+
+
+// Work Example Banner
+.work-example-banner
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  background: white 100%/cover no-repeat
+  height: 300px
+  margin-bottom: 50px
+  text-align: center
+  color: white
+
+
+// Work Example Section
+
+.work-example__video-container
+  text-align: center
+
+.work-example__button-container
+  margin-top: 30px
+  text-align: center
+
+.work-example__button
+  @include site__button()
+  margin-top: 40px
+
+.work-example__iframe
+  display: block
+  margin: auto
+  max-width: 100%
+
+@mixin code-pen-width()
+  max-width: 600px

@@ -1,0 +1,68 @@
+@mixin site__image
+  display: block
+  margin: auto
+  max-width: 100%
+
+.site__image
+  @include site__image()
+
+
+
+@mixin site__image-zoom($existing-transform: "")
+  position: relative
+  max-width: 600px
+  transition: 400ms ease-in-out
+  z-index: 2
+  &.-zoomed
+    z-index: 3
+    transform: scale(1.5) unquote($existing-transform) !important
+    &:hover
+      cursor: zoom-out
+  &:hover
+    cursor: zoom-in
+  @media screen and (max-width: $mobile-portrait)
+    max-width: 100%
+
+.site__image-zoom
+  @include site__image-zoom()
+
+body
+  &:before
+    content: ''
+    background: rgba(255,255,255, 0.8)
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    pointer-events: none
+    opacity: 0
+    transition: 0.3s
+  &.-zoomed
+    &:before
+      opacity: 1
+
+
+
+@mixin site__figure()
+  max-width: 700px
+  margin: auto
+
+.site__figure
+  @include site__figure()
+
+
+
+@mixin site__caption()
+  text-align: center
+  margin-top: 10px
+  font-style: italic
+
+.site__caption
+  @include site__caption()
+
+
+
+
+

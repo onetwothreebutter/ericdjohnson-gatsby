@@ -1,0 +1,25 @@
+@import ../../../../styles/sass/work-ive-done-subpages-base
+@import ../../../../../../styles/sass/breakpoints
+
+
+
+// Banner
+.work-example-banner
+  background-image: url(/src/pages/work-ive-done/subpages/product-design/images/RememberWhen-tile.jpg)
+  background-repeat: repeat
+  background-size: 238px
+  &:before
+    background: rgba(19, 18, 18, 0.21)
+
+.work-example-banner__heading
+  @include site__banner-heading(#464545)
+
+
+.work-example__image--good-meeting
+  @include site__image()
+  @include site__image-zoom()
+  max-width: 900px
+  margin-left: -70px
+  @media screen and (max-width: $tablet-portrait)
+    max-width: 100%
+    margin-left: 0

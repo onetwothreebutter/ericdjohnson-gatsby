@@ -1,0 +1,40 @@
+@import breakpoints
+
+
+
+body
+  box-sizing: border-box
+
+@mixin site__page-width()
+  max-width: 1200px
+  margin: auto
+  text-align: center
+
+.site__page-width
+  @include site__page-width()
+
+
+
+@mixin site__section()
+  @media screen and (max-width: $tablet-portrait)
+    padding: 0 15px
+
+.site__section
+  @include site__section()
+
+
+
+hr.section-divider
+  margin: 50px 0
+  height: 6px
+  border: none
+  text-align: center
+  &:before
+    content: '...'
+    position: relative
+    top: -11px
+    font-size: 30px
+    margin-left: 18px
+    letter-spacing: 20px
+    line-height: 0
+    font-family: serif

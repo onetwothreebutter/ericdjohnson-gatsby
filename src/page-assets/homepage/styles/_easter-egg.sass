@@ -1,0 +1,53 @@
+@import ../../global/styles/breakpoints
+
+
+.easter-egg
+  position: absolute
+  height: 40px
+  width: 40px
+  z-index: 1000
+  &:hover
+    cursor: url(/src/page-assets/homepage/images/nose-picker.png), pointer
+
+.easter-egg__video-container
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) scale(0.1)
+  z-index: 1
+  opacity: 0
+  visibility: hidden
+
+.easter-egg__video
+  pointer-events: none
+
+.easter-egg__close
+  position: absolute
+  top: -20px
+  right: -30px
+  font-size: 20px
+  cursor: pointer
+  text-shadow: 0 0 19px white
+  @media screen and (max-width: $mobile-portrait)
+    top: -40px
+    right: 20px
+
+.easter-egg__appendage
+  position: absolute
+  width: 80%
+  left: 0
+  right: 0
+  margin: auto
+  bottom: 100vh
+  z-index: 10
+  cursor: pointer
+
+.drag-handle
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  cursor: ns-resize

@@ -1,0 +1,50 @@
+@mixin site__banner()
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  background: white 100%/cover no-repeat
+  height: 400px
+  margin-bottom: 50px
+  text-align: center
+  color: white
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(white, 0.07)
+  @media screen and (max-width: 480px)
+    height: 350px
+
+.site__banner
+  @include site__banner()
+
+
+
+@mixin site__banner-heading($text-glow-color: #000000)
+  position: relative
+  margin: auto
+  color: white
+  text-shadow: 0 0 45px $text-glow-color
+  font-size: 60px
+  z-index: 1
+  font-family: 'BrandonPrinted', sans-serif
+  @media screen and (max-width: 480px)
+    font-size: 50px
+    text-shadow: 0 0 25px $text-glow-color
+    line-height: 1
+
+.site__banner-heading
+  @include site__banner-heading()
+
+
+
+@mixin site__photo-credit()
+  position: absolute
+  bottom: 10px
+  right: 10px
+  letter-spacing: 5px
+
+.site__photo-credit
+  @include site__photo-credit()

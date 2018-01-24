@@ -1,0 +1,110 @@
+@import ../colors
+@import ../breakpoints
+
+
+//menu breakpoints for regular pages
+$menu-simplify: 781px
+
+.regular-page
+  .menu
+    display: flex
+    justify-content: center
+    height: 60px
+    @media screen and (max-width: $menu-switch-to-mobile)
+      display: none
+
+  @media screen and (max-width: 480px)
+    header
+      .menu
+        display: none
+
+
+  .menu-item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-left: 50px
+    text-decoration: none
+    color: $red
+    &:before,
+    &:after
+      opacity: 0
+      position: absolute
+      top: 9px
+      font-size: 30px
+      font-weight: lighter
+      transition: 0.3s
+    &:before
+      content: '('
+      left: -20px
+    &:after
+      content: ')'
+      right: -20px
+    &:hover
+      &:before,
+      &:after
+        opacity: 1
+      &:before
+        transform: translateX(5px)
+      &:after
+        transform: translateX(-5px)
+    @media screen and (max-width: $menu-simplify)
+      margin: 0 15px
+      &:last-child
+        margin-right: 0
+
+  @mixin menu-item__heading()
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: auto
+    height: auto
+    margin: 0
+    text-transform: uppercase
+    .mobile-nav &
+      font-size: 14px
+    @media screen and (max-width: $menu-simplify)
+      font-size: 2vw
+
+
+  .menu-item__heading
+    @include menu-item__heading()
+    @media screen and (max-width: $menu-simplify)
+      display: block
+
+  .menu-item__mobile-heading
+    @include menu-item__heading()
+    display: none
+    @media screen and (max-width: $menu-simplify)
+      display: block
+
+  @media screen and (max-width: $menu-simplify)
+    .menu-item__mobile-heading + .menu-item__heading
+      display: none
+
+
+  .menu-item__sub-text
+    display: block
+    font-size: 10px
+    text-transform: uppercase
+    transition: 0.3s
+    @media screen and (max-width: $menu-simplify)
+      display: none
+
+
+  .mobile-nav
+    position: fixed
+    bottom: 0
+    background: white
+    width: 100%
+    border-top: 1px solid #f1f1f1
+    .menu
+      display: none
+      justify-content: space-around
+      @media screen and (max-width: $menu-switch-to-mobile)
+        display: flex
+    .menu-item
+      margin-left: 0

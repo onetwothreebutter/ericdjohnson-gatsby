@@ -1,0 +1,170 @@
+@import ../../global/styles/page-layout
+@import ../../global/styles/typography
+@import ../../global/styles/banner
+@import ../../global/styles/breakpoints
+
+
+$ease-in-fast: ease-in-out
+
+
+.work__banner
+  @include site__banner()
+  background-image: url(../images/michal-grosicki-221225.jpg)
+  margin-bottom: 0
+  @media screen and (max-width: $mobile-portrait)
+    background-image: url(../images/michal-grosicki-221225--mobile.jpg)
+
+
+.work__page-width
+  @include site__page-width()
+  height: 100%
+  display: flex
+  align-items: center
+
+
+.work-tiles
+  @include site__page-width()
+  position: relative
+  padding: 50px 0 60px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+
+.work-tile
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 300px
+  width: 330px
+  margin: 20px
+  text-decoration: none
+  box-shadow: 0 0 5px rgba(gray, 0.3)
+  overflow: hidden
+  &:hover,
+  .touchevents &
+    cursor: pointer
+    .work-tile__text
+      &:before
+        transform: translate(0, 0)
+        opacity: 1
+      .-ui-components &
+        background: rgba(25, 48, 89, 0.1)
+      .-ux-design &
+        background: rgba(75, 172, 164, 0.1)
+    .work-tile__heading
+      transform: translate(0, 0)
+    .work-tile__description
+      opacity: 1
+      transform: translate(0, 0)
+      transition-delay: 0.15s
+
+
+.work-tile__image
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: white 50%/cover no-repeat
+  .-ux-design &
+    background-image: url(../subpages/ux-design/images/csod-resource-center--concept--tile-image.png)
+  .-ui-components &
+    background-image: url(../subpages/ui-components/images/free-trial-form--no-errors.png)
+  #newtons-cradle
+    position: absolute
+    left: 0
+    right: 0
+    top: -60px
+  .-product-design &
+    background-image: url(../subpages/product-design/images/RememberWhen-tile.jpg)
+  .-writing &
+    background-image: url(../subpages/writing/images/op-ed-oct-2016.png)
+  .-visual-design &
+    background-image: url(../subpages/visual-design/images/MajorLeagueReading--tile.png)
+    background-size: 270px
+    background-color: #000080
+
+
+.work-tile__text
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-flow: column
+  background: rgba(255, 255, 255, 0.28)
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0
+    transform: translate(0, 50%)
+    transition: 0.3s
+    .-animations &
+      background-image: linear-gradient(to top, rgba(251, 217, 145, 0.9), rgba(251, 217, 145, 0))
+    .-ui-components &
+      background-image: linear-gradient(to top, rgba(25, 48, 89, 0.9), rgba(25, 48, 89, 0))
+    .-ux-design &
+      background-image: linear-gradient(to top, rgba(128, 128, 128, 0.41), rgba(128, 128, 128, 0))
+    .-product-design &
+      background-image: linear-gradient(to top, rgba(128, 128, 128, 0.9), rgba(128, 128, 128, 0))
+    .-visual-design &
+      background-image: linear-gradient(to top, rgba(#0a2180, 0.9), rgba(#0a2180, 0))
+    .-writing &
+      background-image: linear-gradient(to top, rgba(128, 128, 128, 0.41), rgba(128, 128, 128, 0))
+  .-animations &
+    background: rgba(251, 217, 145,0.8)
+  .-ui-components &
+    background: rgba(25, 48, 89, 0.57)
+  .-ux-design &
+    background: rgba(255, 255, 255, 0.28)
+  .-product-design &
+    background: rgba(128, 128, 128, 0.41)
+  .-visual-design &
+    background: rgba(#0a2180, 0.57)
+  .-writing &
+    background: rgba(128, 128, 128, 0.41)
+
+
+.work-tile__heading
+  position: relative
+  padding: 10px 0
+  margin: 0
+  font-size: 40px
+  font-family: $brandon-printed
+  line-height: 1
+  color: white
+  text-shadow: 0 0 15px rgba(66, 66, 66, 0.25)
+  transform: translate(0, 30px)
+  transition: 0.2s $ease-in-fast
+  .-ux-design &
+    text-shadow: 0 0 15px rgba(66, 66, 66, 0.6)
+  .touchevents &
+    transform: translate(0, 0)
+
+
+
+.work-tile__description
+  position: absolute
+  right: 0
+  left: 0
+  bottom: 50px
+  margin: 0 auto
+  max-width: 250px
+  color: white
+  font-family: $ledger
+  opacity: 0
+  transform: translate(0, 10px)
+  transition: 0.15s $ease-in-fast
+  transition-delay: 0s
+  .touchevents &
+    opacity: 1
+    transform: translate(0, 0)
