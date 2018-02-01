@@ -3,16 +3,24 @@
   "description": "Eric Johnson's Portfolio",
   "version": "1.0.0",
   "author": "Eric Johnson <eric.d.johnson@gmail.com>",
-  "repository": "",
+  "repository": "https://github.com/onetwothreebutter/ericdjohnson-gatsby.git",
   "dependencies": {
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
+    "@jacobmischka/gatsby-plugin-react-svg": "github:jacobmischka/gatsby-plugin-react-svg",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
+    "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
     "gatsby-source-filesystem": "^1.5.11",
     "gsap": "^1.20.3",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
-    "react-codepen-embed": "^0.1.0"
+    "raw-loader": "^0.5.1",
+    "react-codepen-embed": "^0.1.0",
+    "react-svg-inline": "^2.1.0",
+    "react-youtube": "^7.5.0",
+    "svg-react-loader": "^0.4.5"
   },
   "keywords": [
     "gatsby"

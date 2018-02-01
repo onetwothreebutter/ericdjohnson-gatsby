@@ -1,17 +1,18 @@
-@import ../../../../styles/sass/work-ive-done-subpages-base
-@import ../../../../../../styles/sass/breakpoints
+@import ../../../styles/work-ive-done-subpages-base
+@import ../../../../global/styles/breakpoints
 
 
 
 // Banner
-.work-example-banner
-  background-image: url(/src/pages/work-ive-done/subpages/product-design/images/RememberWhen-tile.jpg)
+.product-design-banner
+  @include work-example-banner()
+  background-image: url(../images/RememberWhen-tile.jpg)
   background-repeat: repeat
   background-size: 238px
   &:before
     background: rgba(19, 18, 18, 0.21)
 
-.work-example-banner__heading
+.product-design-banner__heading
   @include site__banner-heading(#464545)
 
 

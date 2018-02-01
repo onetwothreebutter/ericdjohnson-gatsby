@@ -1,9 +1,10 @@
-@import ../../../../styles/sass/work-ive-done-subpages-base
+@import ../../../styles/work-ive-done-subpages-base
 
 
 
-.work-example-banner
-  background-image: url(/src/pages/work-ive-done/subpages/visual-design/images/MajorLeagueReading--Sticker2.png)
+.visual-design-banner
+  @include work-example-banner()
+  background-image: url(../images/MajorLeagueReading--Sticker2.png)
   background-size: 400px
   background-repeat: repeat
   background-color: #000080
@@ -16,7 +17,7 @@
     right: 0
     background: rgba(80, 80, 80, 0.47)
 
-.work-example-banner__heading
+.visual-design-banner__heading
   @include site__banner-heading(#797777)
 
 .work-example__image--5k-logo

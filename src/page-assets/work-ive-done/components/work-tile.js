@@ -8,14 +8,10 @@ class WorkTile extends React.Component{
 
         var link = "/work-ive-done/" + this.props.link;
 
-        if(this.props.img) {
-            var img = <img src={ this.props.img }/>;
-        }
-
         return (
             <Link to={link} className={`work-tile -${this.props.link}`}>
                 <div className="work-tile__image">
-                    { img }
+                    { this.props.svg }
                 </div>
                 <div className="work-tile__text">
                     <h2 className="work-tile__heading">{this.props.heading}</h2>
@@ -29,7 +25,7 @@ class WorkTile extends React.Component{
 
 WorkTile.propTypes = {
     link: PropTypes.string,
-    img: PropTypes.optionalString,
+    img: PropTypes.element,
     header: PropTypes.string,
     description: PropTypes.string,
 };

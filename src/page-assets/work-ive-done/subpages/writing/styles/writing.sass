@@ -1,13 +1,14 @@
-@import ../../../../styles/sass/work-ive-done-subpages-base
+@import ../../../styles/work-ive-done-subpages-base
 
 
 
-.work-example-banner
-  background-image: url(/src/pages/work-ive-done/subpages/writing/images/op-ed-oct-2016--banner.png)
+.writing-banner
+  @include work-example-banner()
+  background-image: url(../images/op-ed-oct-2016--banner.png)
   background-position: center top
 
 
-.work-example-banner__heading
+.writing-banner__heading
   @include site__banner-heading(#5a5959)
 
 

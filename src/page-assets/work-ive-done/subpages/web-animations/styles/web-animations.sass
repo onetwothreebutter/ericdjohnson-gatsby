@@ -4,13 +4,14 @@
 
 
 
-.work-example-banner
+.web-animations-banner
+  @include site__banner()
   background-image: url(../images/newtons-cradle.png)
   background-color: #f3f3f3
   &:before
     background-color: rgba(90, 89, 89, 0.07)
 
-.web-animations__heading
+.web-animations-banner__heading
   @include site__banner-heading(#5a5959)
 
 .web-animations__codepen-embed

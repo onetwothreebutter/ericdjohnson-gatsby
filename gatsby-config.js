@@ -3,6 +3,8 @@ module.exports = {
     title: `Eric Johnson's Portfolio`,
   },
   plugins: [
-      `gatsby-plugin-react-helmet`
+      `gatsby-plugin-react-helmet`,
+      `@jacobmischka/gatsby-plugin-react-svg`
   ],
+    pathPrefix: '/static',
 }

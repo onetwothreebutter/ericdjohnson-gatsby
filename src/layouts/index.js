@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Menu from './menu'
+import Menu from '../page-assets/global/components/menu/menu'
 
 import headerStyles from '../page-assets/global/styles/_header.sass';
 
@@ -22,6 +22,28 @@ class Header extends React.Component {
 
 class TemplateWrapper extends React.Component {
 
+    componentDidMount() {
+        if (!document.getElementById('webfontloader')) {
+            const wf = document.createElement('script');
+            const s = document.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            wf.id = 'webfontloader';
+            wf.onload = () => {
+                WebFont.load({
+                    google: {
+                        families: ['Dancing+Script','Ledger'],
+                    },
+                    custom: {
+                        families: ['BrandonPrinted']
+                    },
+                });
+            };
+
+            s.parentNode.insertBefore(wf, s);
+        }
+    }
+
     render (){
 
         var header = <Header {...this.props} />
@@ -35,8 +57,8 @@ class TemplateWrapper extends React.Component {
                 <Helmet
                     title="Eric Johnson, Web Developer/UX Guy/Creative Person"
                     meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
+                        { name: 'description', content: 'Eric Johnson\'s portfolio of web animations, code, and other skills.'  },
+                        { name: 'keywords', content: 'web developer, portfolio' },
                     ]}
                 >
                 </Helmet>

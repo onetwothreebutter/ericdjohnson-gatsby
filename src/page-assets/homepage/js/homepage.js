@@ -1,4 +1,7 @@
-var $ = require('jquery');
+import $ from 'jquery'
+import { TimelineMax } from 'gsap'
+import imagesLoaded from 'imagesloaded'
+imagesLoaded.makeJQueryPlugin( $ );
 
 module.exports = function HomePage() {
 
@@ -15,9 +18,7 @@ module.exports = function HomePage() {
 
         function startLoadingAnimation() {
             $('.homepage-background').imagesLoaded(function () {
-
                 $('body').addClass('-text-in-focus');
-
             });
         }
 
@@ -248,10 +249,10 @@ module.exports = function HomePage() {
             $('audio').filter("." + className)[0].pause();
         }
 
-        // return {
-        //     init: init,
-        //     onPlayerStateChange:onPlayerStateChange,
-        // }
+        return {
+            init: init,
+            onPlayerStateChange:onPlayerStateChange,
+        }
 
-    }
+}
 

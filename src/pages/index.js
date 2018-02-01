@@ -1,12 +1,18 @@
 import React from 'react'
-import Menu from '../layouts/menu'
+import Menu from '../page-assets/global/components/menu/menu'
 
-
+import HomePage from '../page-assets/homepage/js/homepage'
 
 import homepageStyles from '../page-assets/homepage/styles/homepage.sass'
-import homePageMenuStyle from '../page-assets/global/styles/menu/_home-page.sass'
+import homePageMenuStyle from '../page-assets/global/components/menu/styles/_home-page.sass'
 
 class IndexPage extends React.Component {
+
+    constructor(props) {
+        super(props)
+        HomePage().init()
+    }
+
     render() {
         return (
             <div>

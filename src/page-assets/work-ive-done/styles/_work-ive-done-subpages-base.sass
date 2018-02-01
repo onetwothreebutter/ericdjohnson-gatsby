@@ -2,7 +2,7 @@
 @import ../../global/styles/typography
 @import ../../global/styles/images
 @import ../../global/styles/lists
-@import ../../global/styles/menu/regular-page
+@import ../../global/components/menu/styles/regular-page
 @import ../../global/styles/banner
 @import ../../global/styles/codepen
 @import ../../global/styles/buttons
@@ -15,7 +15,7 @@
 
 
 // Work Example Banner
-.work-example-banner
+@mixin work-example-banner()
   position: relative
   display: flex
   justify-content: center
@@ -25,6 +25,9 @@
   margin-bottom: 50px
   text-align: center
   color: white
+
+.work-example-banner
+  @include work-example-banner()
 
 
 // Work Example Section
