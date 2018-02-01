@@ -22,7 +22,7 @@ class Header extends React.Component {
 
 class TemplateWrapper extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         if (!document.getElementById('webfontloader')) {
             const wf = document.createElement('script');
             const s = document.scripts[0];
@@ -31,9 +31,6 @@ class TemplateWrapper extends React.Component {
             wf.id = 'webfontloader';
             wf.onload = () => {
                 WebFont.load({
-                    google: {
-                        families: ['Dancing+Script','Ledger'],
-                    },
                     custom: {
                         families: ['BrandonPrinted']
                     },

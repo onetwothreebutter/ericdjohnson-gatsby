@@ -1,0 +1,164 @@
+@import ../../global/components/menu/styles/regular-page
+@import ../../global/styles/banner
+@import ../../global/styles/page-layout
+@import ../../global/styles/lists
+@import ../../global/styles/typography
+@import ../../global/styles/images
+@import ../../global/styles/breakpoints
+
+
+// Breakpoints for this page
+$adjust-banner-background-image--larger-screens: 1612px
+$adjust-banner-background-image--tablet: 870px
+
+
+.skills-banner
+  @include site__banner()
+  overflow: hidden
+  background-color: #1b1f13
+  &:before
+    display: none
+  @media screen and (max-width: $mobile-portrait)
+    background-image: url(../images/jakob-owens-299038--mobile.jpg)
+  @media screen and (max-width: $adjust-banner-background-image--tablet)
+    background-position: center
+  @media screen and (min-width: $adjust-banner-background-image--larger-screens)
+    background-position-y: -330px
+  canvas
+    position: absolute
+    transition: 0.4s
+    z-index: 0
+
+.skills-banner__page-width
+  @include site__page-width()
+  z-index: 2
+
+.skills-banner__water-effect-target-image
+  display: none
+
+.skills-banner__background
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-image: url(../images/jakob-owens-299038.jpg)
+  background-color: #1c1f16
+  background-repeat: no-repeat
+  background-position: center
+  transform: scale(1.2) //to match the scaling for the ripple effect
+  z-index: 1
+  pointer-events: none
+  transition: 1s
+  .-water-effect-loaded &
+    opacity: 0
+
+
+// Web Skills section
+.web-skills__codewars-link
+  display: block
+
+.web-skills__scale
+  max-width: 360px
+  margin: 0 auto 50px
+  text-align: left
+  border: 1px solid #c1c1c1
+  padding: 20px 40px
+  border-radius: 4px
+  background: #f8fff9
+  color: #0C5F1E
+
+.web-skills__scale-heading
+  @include site__paragraph-font()
+  font-size: 20px
+
+.web-skills__scale-name
+  font-size: 15px
+  font-weight: bold
+  display: none
+
+.web-skills__scale-definition
+  @include site__paragraph-font()
+  font-size: 14px
+  margin: 0 0 15px 0
+
+.web-skills__skill-list-heading
+  font-size: 30px
+
+.web-skills__skill-list
+  max-width: 400px
+  padding: 0
+  margin: auto
+  text-align: left
+  list-style-type: none
+
+.web-skills__skill-item
+  @include site__paragraph-font()
+  color: #2ea726
+  margin-bottom: 20px
+  &.-javascript
+    border: 1px solid #c5c5c5
+    border-radius: 5px
+    padding: 10px 50px 10px 10px
+
+.web-skills__skill-sublist
+  list-style-type: none
+
+@mixin proficiency()
+  height: 15px
+  border-radius: 5px
+  position: relative
+  background: #dadada
+  &:before
+    content: ''
+    position: absolute
+    background: #4CAF50
+    top: 0
+    bottom: 0
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+
+.proficiency--beginner
+  @include proficiency()
+  &:before
+    width: 33%
+
+.proficiency--comfortable
+  @include proficiency()
+  &:before
+    width: 66%
+
+.proficiency--master
+  @include proficiency()
+  &:before
+    width: 100%
+    border-radius: 5px
+
+.web-skills__asterisk
+  @include site__paragraph-font()
+  font-size: 14px
+  max-width: 400px
+  margin: auto
+
+.web-course__image
+  @include site__image()
+  box-shadow: 0 0 3px #b5b5b5
+  margin: 15px auto
+  transition: 0.3s
+  &:first-child
+    margin-top: 30px
+  &:hover
+    transform: scale(1.03)
+    box-shadow: 0 0 10px #b5b5b5
+
+
+// Communication section
+
+.communication__heading
+  @include site__section-heading()
+
+
+
+.site__image--cutout
+  @include site__image()
+  margin-top: 40px
