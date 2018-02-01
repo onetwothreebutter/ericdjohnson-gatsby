@@ -101,9 +101,9 @@ const Writing = () => (
         <section className="site__section">
             <h2 className="site__section-heading">Letters to the Editor</h2>
             <p className="letter-to-editor__paragraph-text">
-                <ZoomableImage img={moreCoverageLTE} alt="Photo of More Coverage Needed letter to the editor" className="letter-item__thumbnail -more-coverage"/>
-                <ZoomableImage img={supervisorsThankYouLTE} alt="Photo of Supervisors letter to the editor" className="letter-item__thumbnail -supervisors"/>
-                <ZoomableImage img={schoolBoardLTE} alt="Photo of School Board letter to the editor" className="letter-item__thumbnail -school-board"/>
+                <ZoomableImage img={moreCoverageLTE} alt="Photo of More Coverage Needed letter to the editor" className="letter-item__thumbnail -more-coverage" parentClass="letter-item__thumbnail-container"/>
+                <ZoomableImage img={supervisorsThankYouLTE} alt="Photo of Supervisors letter to the editor" className="letter-item__thumbnail -supervisors" parentClass="letter-item__thumbnail-container"/>
+                <ZoomableImage img={schoolBoardLTE} alt="Photo of School Board letter to the editor" className="letter-item__thumbnail -school-board" parentClass="letter-item__thumbnail-container"/>
             </p>
         </section>
 

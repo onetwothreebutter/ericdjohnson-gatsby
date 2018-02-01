@@ -18,7 +18,7 @@ class ZoomableImage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={this.props.parentClass}>
                 <img onClick={this.handleClick} className={`site__image-zoom js-zoomable ${this.props.className} ${this.state.zoomClass}`} src={this.props.img} alt={this.props.alt}/>
             </div>
 
@@ -31,6 +31,7 @@ ZoomableImage.propTypes = {
     img: PropTypes.string,
     alt: PropTypes.string,
     className: PropTypes.string,
+    parentClass: PropTypes.optionalString
 };
 
 export default ZoomableImage

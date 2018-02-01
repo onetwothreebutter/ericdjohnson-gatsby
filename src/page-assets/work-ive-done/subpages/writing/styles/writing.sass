@@ -39,6 +39,9 @@
   position: relative
   text-align: center
 
+.letter-item__thumbnail-container
+  display: inline-block
+
 .letter-item__thumbnail
   @include site__image-zoom(rotate(-2deg))
   width: 130px
@@ -46,7 +49,7 @@
     transform: rotate(-2deg)
   &.-school-board
     width: 180px
-    margin: 0 0 -140px -140px
+    left: -140px
     transform: rotate(-1deg)
   &.-supervisors
     width: 280px
