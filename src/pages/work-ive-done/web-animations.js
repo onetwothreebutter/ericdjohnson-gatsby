@@ -11,7 +11,7 @@ import foundersMp4 from '../../page-assets/work-ive-done/subpages/web-animations
 
 
 
-class WebAnimations extends React.Component
+class WebAnimationsPage extends React.Component
 {
     render() {
 
@@ -125,4 +125,4 @@ class WebAnimations extends React.Component
     }
 }
 
-export default WebAnimations
+export default WebAnimationsPage

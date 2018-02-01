@@ -6,7 +6,7 @@ import uiComponentStyles from '../../page-assets/work-ive-done/subpages/ui-compo
 
 
 
-const UIComponents = () => {
+const UIComponentsPage = () => {
 
     var codependProps = { className: 'codepen', height: 435, user: 'ericdjohnson', preview: false, defaultTab: 'result' }
 
@@ -130,4 +130,4 @@ const UIComponents = () => {
     )
 }
 
-export default UIComponents
+export default UIComponentsPage

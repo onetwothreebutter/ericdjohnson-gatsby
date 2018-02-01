@@ -8,7 +8,7 @@ import NewtonsCradle from '../../page-assets/work-ive-done/images/newtons-cradle
 import workIveDoneStyles from '../../page-assets/work-ive-done/styles/work-ive-done.sass'
 
 
-class WorkIveDone extends React.Component {
+class WorkIveDonePage extends React.Component {
 
     render() {
 
@@ -37,4 +37,4 @@ class WorkIveDone extends React.Component {
     }
 }
 
-export default WorkIveDone
+export default WorkIveDonePage

@@ -12,7 +12,7 @@ import iowaBookFestival from '../../page-assets/work-ive-done/subpages/visual-de
 
 
 
-const VisualDesign = () => (
+const VisualDesignPage = () => (
 
     <div>
         <section className="visual-design-banner">
@@ -94,4 +94,4 @@ const VisualDesign = () => (
     </div>
 )
 
-export default VisualDesign
+export default VisualDesignPage

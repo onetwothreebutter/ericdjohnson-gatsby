@@ -11,7 +11,7 @@ import goodMeetingCollage from '../../page-assets/work-ive-done/subpages/product
 
 
 
-const ProductDesign = () => {
+const ProductDesignPage = () => {
 
     let youtubeOpts = {
         playerVars: {
@@ -119,4 +119,4 @@ const ProductDesign = () => {
     )
 }
 
-export default ProductDesign
+export default ProductDesignPage

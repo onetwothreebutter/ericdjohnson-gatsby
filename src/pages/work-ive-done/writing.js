@@ -16,7 +16,7 @@ import schoolBoardLTE from '../../page-assets/work-ive-done/subpages/writing/ima
 
 
 
-const Writing = () => (
+const WritingPage = () => (
     <div>
         <section className="writing-banner">
             <h1 className="writing-banner__heading">
@@ -111,4 +111,4 @@ const Writing = () => (
     </div>
 )
 
-export default Writing
+export default WritingPage

@@ -12,7 +12,7 @@ import resourceCenterConcept from '../../page-assets/work-ive-done/subpages/ux-d
 
 
 
-const UXDesign = () => (
+const UXDesignPage = () => (
 
     <div>
         <section className="ux-design-banner">
@@ -92,6 +92,6 @@ const UXDesign = () => (
 
 )
 
-export default UXDesign
+export default UXDesignPage
 
 
