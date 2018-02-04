@@ -1,0 +1,21 @@
+@import ../../global/components/menu/styles/regular-page
+@import ../../global/styles/banner
+@import ../../global/styles/page-layout
+@import ../../global/styles/typography
+@import ../../global/styles/breakpoints
+
+
+// Breakpoints for this page
+$shift-bird-background: 1033px
+
+
+.what-banner
+  @include site__banner()
+  background-image: url(../images/ray-hennessy-233399.jpg)
+  background-repeat: no-repeat
+  background-position-y: -123px
+  @media screen and (max-width: $shift-bird-background)
+    background-position-y: -50px
+  @media screen and (max-width: $mobile-portrait)
+    background-image: url(../images/ray-hennessy-233399--mobile.jpg)
+    background-position-y: top
