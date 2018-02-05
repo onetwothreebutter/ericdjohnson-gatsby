@@ -1,24 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Menu from '../page-assets/global/components/menu/menu'
-
-import headerStyles from '../page-assets/global/styles/_header.sass';
-
+import Header from '../page-assets/global/components/header/header'
+import Footer from '../page-assets/global/components/footer/footer'
 
 
-class Header extends React.Component {
-    render() {
-        return (
-            <header>
-                <div className="header__page-width">
-                    <a className="logo" href="/">Eric Johnson</a>
-                    <Menu {...this.props}></Menu>
-                </div>
-            </header>
-        )
-    }
-}
 
 class TemplateWrapper extends React.Component {
 
@@ -44,8 +30,10 @@ class TemplateWrapper extends React.Component {
     render (){
 
         var header = <Header {...this.props} />
+        var pageClass = 'regular-page'
         if(this.props.location.pathname == '/') {
             header = ''
+            pageClass = 'homepage'
         }
 
         return (
@@ -59,9 +47,12 @@ class TemplateWrapper extends React.Component {
                     ]}
                 >
                 </Helmet>
-                { header }
-                <div>
-                    {this.props.children()}
+                <div className={`page-wrapper ${pageClass}`}>
+                    { header }
+                    <div>
+                        {this.props.children()}
+                    </div>
+                    <Footer/>
                 </div>
             </div>
         )
