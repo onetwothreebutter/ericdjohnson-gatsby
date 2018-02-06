@@ -90,36 +90,35 @@ const WhoIAmPage = () => {
                 <h2 className="site__section-heading">Community Oriented</h2>
                 <p className="site__paragraph-text">
                     I’m an engaged citizen and civic-minded. A few examples:
-
-                    <ul className="site__ol-or-ul-list">
-                        <li className="site__list-item">I’m the co-leader of the Iowa City chapter of <a className="site__paragraph-link"
-                                                                                                         href="https://citizensclimatelobby.org/"
-                                                                                                         target="_blank">Citizens'
-                            Climate Lobby</a>, which is an international organization focused on
-                            passing bipartisan climate change legislation
-                            at the federal level. I lead and organize monthly meetings and help chapter members write letters and meet
-                            with Iowa’s Senators and Representatives.
-                        </li>
-                        <li className="site__list-item">In Spring 2017, I organized a <a className="site__paragraph-link" href="https://runforvictimsofclimatechange.org/" target="_blank">run/walk fundraiser</a> for climate change victims.
-                            We had 71 registrants and raised over $2,300 for the American Red Cross's Disaster Relief Fund.
-                        </li>
-                        <li className="site__list-item">I served on the Wellness Committee and the Coolness Committee at my previous
-                            job at Integrated DNA Technologies. We created a "Thinnest Winner" contest for weight loss (my name!), and
-                            helped plan office overhauls to modernize our workplace.</li>
-                    </ul>
                 </p>
+
+                <ul className="site__ol-or-ul-list">
+                    <li className="site__list-item">I’m the co-leader of the Iowa City chapter of <a className="site__paragraph-link"
+                                                                                                     href="https://citizensclimatelobby.org/"
+                                                                                                     target="_blank">Citizens'
+                        Climate Lobby</a>, which is an international organization focused on
+                        passing bipartisan climate change legislation
+                        at the federal level. I lead and organize monthly meetings and help chapter members write letters and meet
+                        with Iowa’s Senators and Representatives.
+                    </li>
+                    <li className="site__list-item">In Spring 2017, I organized a <a className="site__paragraph-link" href="https://runforvictimsofclimatechange.org/" target="_blank">run/walk fundraiser</a> for climate change victims.
+                        We had 71 registrants and raised over $2,300 for the American Red Cross's Disaster Relief Fund.
+                    </li>
+                    <li className="site__list-item">I served on the Wellness Committee and the Coolness Committee at my previous
+                        job at Integrated DNA Technologies. We created a "Thinnest Winner" contest for weight loss (my name!), and
+                        helped plan office overhauls to modernize our workplace.</li>
+                </ul>
 
 
                 <h2 className="site__section-heading">Miscellaneous</h2>
-                <p className="site__paragraph-text">
+                <div className="site__paragraph-text">
                     <ul className="site__ol-or-ul-list">
                         <li className="site__list-item">I love baseball and once led a co-ed slow-pitch softball team called the Monster Ballads.</li>
                         <li className="site__list-item">I say "pop" instead of "soda" but don't drink either anymore.</li>
                         <li className="site__list-item">I have a <a className="site__paragraph-link" href="https://onewheel.com/" target="_blank">Onewheel+</a> and I love it to death!</li>
                         <li className="site__list-item">I unfortunately pronounce the "h" in "white" and "whale."</li>
                     </ul>
-
-                </p>
+                </div>
             </section>
 
             <hr className="section-divider"/>
