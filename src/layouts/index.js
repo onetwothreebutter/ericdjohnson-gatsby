@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../page-assets/global/components/header/header'
 import Footer from '../page-assets/global/components/footer/footer'
+import Menu from '../page-assets/global/components/menu/menu'
 
 
 
@@ -53,6 +54,9 @@ class TemplateWrapper extends React.Component {
                         {this.props.children()}
                     </div>
                     <Footer/>
+                    <div className="mobile-nav">
+                        <Menu />
+                    </div>
                 </div>
             </div>
         )

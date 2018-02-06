@@ -1,30 +1,37 @@
 import $ from 'jquery'
 import { TimelineMax } from 'gsap'
+import Draggable from 'gsap/Draggable'
 import imagesLoaded from 'imagesloaded'
 imagesLoaded.makeJQueryPlugin( $ );
+
+//assets
+import footSound from '../files/foot-sound-effect.mp3'
+import cartoonPopSound from '../files/cartoon-pop-sound.mp3'
+import stretchingSound from '../files/stretching-sound.mp3'
+
+
 
 module.exports = function HomePage() {
 
 
-        var $appendage = $('.easter-egg__appendage');
-        var $homepageContainer = $('.homepage-scaling-container');
+        var $appendage;
+        var $homepageContainer;
 
         function init() {
             startLoadingAnimation();
-            setCopyrightYear();
-            initBackgroundFocusButtons();
-            setupEasterEgg();
+
+            $(document).ready(function(){
+                $appendage = $('.easter-egg__appendage');
+                $homepageContainer = $('.homepage-scaling-container');
+                initBackgroundFocusButtons();
+                setupEasterEgg();
+            });
         }
 
         function startLoadingAnimation() {
             $('.homepage-background').imagesLoaded(function () {
                 $('body').addClass('-text-in-focus');
             });
-        }
-
-        function setCopyrightYear() {
-            var currentYear = new Date().getFullYear();
-            $('.footer__copyright-year').html(currentYear);
         }
 
         function initBackgroundFocusButtons() {
@@ -114,8 +121,8 @@ module.exports = function HomePage() {
                 .set($easterEggVideoContainer, {display: "none"})
                 .timeScale(1);
 
-            addAudioFile('stretching-sound');
-            addAudioFile('cartoon-pop-sound');
+            addAudioFile(stretchingSound, 'stretching-sound');
+            addAudioFile(cartoonPopSound, 'cartoon-pop-sound');
         }
 
         function setupHomepageDrag() {
@@ -179,7 +186,8 @@ module.exports = function HomePage() {
             var image = { width: 1280, height: 960 };
             var target = { x: 750, y: 260 };
 
-            var pointer = $('.easter-egg');
+            var pointer;
+            $(document).ready(function(){pointer = $('.easter-egg');});
 
             $(document).ready(updatePointer);
             $(window).resize(updatePointer);
@@ -213,7 +221,7 @@ module.exports = function HomePage() {
         var youtubePlayer = null;
         function tweenEasterEggVideo(event) {
 
-            addAudioFile('foot-sound-effect');
+            addAudioFile(footSound, 'foot-sound-effect');
 
             event.stopPropagation();
 
@@ -236,8 +244,8 @@ module.exports = function HomePage() {
 
         }
 
-        function addAudioFile(fileName) {
-            var $audio = $('<audio class="' + fileName + '" src="/src/pages/homepage/files/' + fileName + '.mp3"></audio>');
+        function addAudioFile(fileName, className) {
+            var $audio = $('<audio class="' + className + '" src="' + fileName + '"></audio>');
             $('body').append($audio);
         }
 

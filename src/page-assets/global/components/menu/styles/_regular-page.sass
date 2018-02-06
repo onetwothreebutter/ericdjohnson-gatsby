@@ -64,8 +64,6 @@ $menu-simplify: 781px
     height: auto
     margin: 0
     text-transform: uppercase
-    .mobile-nav &
-      font-size: 14px
     @media screen and (max-width: $menu-simplify)
       font-size: 2vw
 
@@ -74,6 +72,11 @@ $menu-simplify: 781px
     @include menu-item__heading()
     @media screen and (max-width: $menu-simplify)
       display: block
+
+  .mobile-nav
+    .menu-item__heading,
+    .menu-item__mobile-heading
+      font-size: 14px
 
   .menu-item__mobile-heading
     @include menu-item__heading()

@@ -43,7 +43,6 @@ const BannerEffect = function (options) {
         var renderer = new PIXI.autoDetectRenderer(options.stageWidth, options.stageHeight, {transparent: true});
         var stage = new PIXI.Container();
         var slidesContainer = new PIXI.Container();
-        debugger;
         var displacementSprite = new PIXI.Sprite.fromImage(options.displacementImage);
         var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
 
