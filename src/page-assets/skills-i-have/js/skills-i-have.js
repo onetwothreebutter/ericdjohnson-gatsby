@@ -2,11 +2,13 @@ import $ from 'jquery'
 import imagesLoaded from 'imagesloaded'
 import BannerEffect from './banner-effect'
 
+
 //images
 import cloudsDisplacementImage from '../images/displacement-maps/2048x2048/clouds.jpg'
 
-const SkillsIHaveBanner = () => {
-    (() => {
+function initSkillsBanner() {
+
+    $(document).ready(function(){
         var $body = $('body');
         imagesLoaded($body, function() {
             $body.addClass('-water-effect-loaded');
@@ -16,7 +18,7 @@ const SkillsIHaveBanner = () => {
 
         var initBannerEffect = new BannerEffect({
             backgroundImage: $('.skills-banner__water-effect-target-image').attr('src'),
-            displacementImage: {cloudsDisplacementImage},
+            displacementImage: cloudsDisplacementImage,
             stageWidth: $banner[0].offsetWidth,
             stageHeight: $banner[0].offsetHeight,
             centerSprites: true,
@@ -29,7 +31,7 @@ const SkillsIHaveBanner = () => {
             displaceAutoFit: false,
             dispatchPointerOver: true // restarts pointerover event after click
         });
-    })()
+    });
 }
 
-export default SkillsIHaveBanner
+export default initSkillsBanner

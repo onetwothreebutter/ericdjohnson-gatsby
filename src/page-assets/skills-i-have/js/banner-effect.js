@@ -1,9 +1,13 @@
 /**
  * Adapted from codrops article https://tympanus.net/codrops/2017/10/10/liquid-distortion-effects/
  */
-import PIXI from 'pixi.js'
+//PixiJS has to be imported this way using the CommonJS ES5 module method
+import * as Pixi from 'pixi.js'
+import $ from 'jquery'
 
-const BannerEffect = (options) => {
+
+
+const BannerEffect = function (options) {
 
         //  SCOPE
         /// ---------------------------
@@ -39,6 +43,7 @@ const BannerEffect = (options) => {
         var renderer = new PIXI.autoDetectRenderer(options.stageWidth, options.stageHeight, {transparent: true});
         var stage = new PIXI.Container();
         var slidesContainer = new PIXI.Container();
+        debugger;
         var displacementSprite = new PIXI.Sprite.fromImage(options.displacementImage);
         var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
 
