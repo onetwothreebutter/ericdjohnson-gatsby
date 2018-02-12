@@ -11,6 +11,7 @@ exports.modifyWebpackConfig = function (_ref, options) {
 
     var sassFiles = /\.s[ac]ss$/;
     var sassModulesFiles = /\.module\.s[ac]ss$/;
+    options['sourceMap'] = 'sourceMap';
     var sassLoader = `sass?${JSON.stringify(options)}`;
 
     switch (stage) {
@@ -19,7 +20,37 @@ exports.modifyWebpackConfig = function (_ref, options) {
             config.loader(`sass`, {
                 test: sassFiles,
                 exclude: sassModulesFiles,
-                loaders: [`style`, `css`, 'resolve-url-loader', 'sass-loader?sourceMap']
+                loaders: [`style`, `css`, 'resolve-url-loader', sassLoader]
+            });
+            return config;
+        }
+        case `build-css`:
+        {
+            config.loader(`sass`, {
+                test: sassFiles,
+                exclude: sassModulesFiles,
+                loader: ExtractTextPlugin.extract([`css?minimize`, 'resolve-url-loader', sassLoader])
+            });
+
+            config.loader(`sassModules`, {
+                test: sassModulesFiles,
+                loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), 'resolve-url-loader', sassLoader])
+            });
+            return config;
+        }
+        case `develop-html`:
+        case `build-html`:
+        case `build-javascript`:
+        {
+            config.loader(`sass`, {
+                test: sassFiles,
+                exclude: sassModulesFiles,
+                loader: `null`
+            });
+
+            config.loader(`sassModules`, {
+                test: sassModulesFiles,
+                loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), 'resolve-url-loader', sassLoader])
             });
             return config;
         }

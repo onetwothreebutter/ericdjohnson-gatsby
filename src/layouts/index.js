@@ -9,7 +9,7 @@ import Menu from '../page-assets/global/components/menu/menu'
 
 class TemplateWrapper extends React.Component {
 
-    componentWillMount() {
+    componentDidMount() {
         if (!document.getElementById('webfontloader')) {
             const wf = document.createElement('script');
             const s = document.scripts[0];
