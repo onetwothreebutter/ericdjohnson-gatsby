@@ -19,7 +19,6 @@ module.exports = function HomePage() {
 
         function init() {
             startLoadingAnimation();
-
             $(document).ready(function(){
                 $appendage = $('.easter-egg__appendage');
                 $homepageContainer = $('.homepage-scaling-container');
