@@ -1,6 +1,12 @@
 import React from 'react'
 import PhotoCredit from '../page-assets/global/components/photo-credit'
-import skillsIHaveInit from '../page-assets/skills-i-have/js/skills-i-have'
+//include in try/catch because getting "window not defined error" when building with `gatsby build`
+try {
+    var skillsIHaveInit = require('../page-assets/skills-i-have/js/skills-i-have');
+} catch (e) {
+    console.log(e);
+}
+
 
 //styles
 import skillsStyles from '../page-assets/skills-i-have/styles/skills-i-have.sass'

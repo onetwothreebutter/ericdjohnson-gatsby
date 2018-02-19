@@ -5,6 +5,5 @@ module.exports = {
   plugins: [
       `gatsby-plugin-react-helmet`,
       `@jacobmischka/gatsby-plugin-react-svg`
-  ],
-    pathPrefix: '/static',
+  ]
 }

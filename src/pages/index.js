@@ -12,8 +12,7 @@ import cleanFoot from '../page-assets/homepage/images/clean-foot.png'
 
 class IndexPage extends React.Component {
 
-    constructor(props) {
-        super(props)
+    componentDidMount() {
         HomePage().init()
     }
 

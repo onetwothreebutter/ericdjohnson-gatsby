@@ -1,8 +1,13 @@
 import $ from 'jquery'
 import { TimelineMax } from 'gsap'
-import Draggable from 'gsap/Draggable'
+//imclude Draggable this way to avoid error during server side rendering
+// because it requires "navigator" in scope and gatsby build won't work
+try {
+    var Draggable = require('gsap/Draggable');
+} catch (e) {
+    console.log(e);
+}
 import imagesLoaded from 'imagesloaded'
-imagesLoaded.makeJQueryPlugin( $ );
 
 //assets
 import footSound from '../files/foot-sound-effect.mp3'
@@ -28,7 +33,7 @@ module.exports = function HomePage() {
         }
 
         function startLoadingAnimation() {
-            $('.homepage-background').imagesLoaded(function () {
+            imagesLoaded('.homepage-background', function () {
                 $('body').addClass('-text-in-focus');
             });
         }
