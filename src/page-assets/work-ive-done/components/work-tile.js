@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import {TimelineMax} from 'gsap';
-
+import $ from 'jquery'
 
 
 class WorkTile extends React.Component{
 
     componentDidMount() {
         if(this.props.link === 'web-animations') {
-            //set up animation
             var newtonsCradleTl = new TimelineMax();
             var $leftBall = $("#newtons-cradle #left-ball");
             var $rightBall = $("#newtons-cradle #right-ball");
