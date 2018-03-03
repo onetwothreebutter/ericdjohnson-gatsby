@@ -60,7 +60,7 @@ const WritingPage = () => (
                 As a member of my local newspaper's Writer’s Group, I regularly write 700-word op-eds on climate change issues.
                 The <span className="site__book-title">Press-Citizen</span> newspaper has a potential audience of 150,000 people.
             </p>
-            <p className="site__paragraph-text">
+            <div className="site__paragraph-text">
                 <a className="news-item -first-step" href="http://www.press-citizen.com/story/opinion/contributors/guest-editorials/2014/09/16/time-join-iowa-city-peoples-climate-march/15698613/
 ">
                     <figure>
@@ -93,7 +93,7 @@ const WritingPage = () => (
                         <figcaption className="news-item__title">Fee and dividend plan would curb climate change</figcaption>
                     </figure>
                 </a>
-            </p>
+            </div>
         </section>
 
         <hr className="section-divider"/>
@@ -101,9 +101,9 @@ const WritingPage = () => (
         <section className="site__section">
             <h2 className="site__section-heading">Letters to the Editor</h2>
             <p className="letter-to-editor__paragraph-text">
-                <ZoomableImage img={moreCoverageLTE} alt="Photo of More Coverage Needed letter to the editor" className="letter-item__thumbnail -more-coverage" parentClass="letter-item__thumbnail-container"/>
-                <ZoomableImage img={supervisorsThankYouLTE} alt="Photo of Supervisors letter to the editor" className="letter-item__thumbnail -supervisors" parentClass="letter-item__thumbnail-container"/>
-                <ZoomableImage img={schoolBoardLTE} alt="Photo of School Board letter to the editor" className="letter-item__thumbnail -school-board" parentClass="letter-item__thumbnail-container"/>
+                <ZoomableImage img={moreCoverageLTE} alt="Photo of More Coverage Needed letter to the editor" className="letter-item__thumbnail -more-coverage" parentClassName="letter-item__thumbnail-container"/>
+                <ZoomableImage img={supervisorsThankYouLTE} alt="Photo of Supervisors letter to the editor" className="letter-item__thumbnail -supervisors" parentClassName="letter-item__thumbnail-container"/>
+                <ZoomableImage img={schoolBoardLTE} alt="Photo of School Board letter to the editor" className="letter-item__thumbnail -school-board" parentClassName="letter-item__thumbnail-container"/>
             </p>
         </section>
 
