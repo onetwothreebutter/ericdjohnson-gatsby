@@ -24,6 +24,11 @@ import cutoutImage from '../page-assets/skills-i-have/images/cardboard-cutout.jp
 
 class SkillsIHavePage extends React.Component {
 
+    constructor(props) {
+        super(props)
+        skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
+    }
+
     componentDidMount() {
         skillsIHaveInit()
     }

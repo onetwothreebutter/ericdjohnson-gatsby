@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Writing Page should render correctly 1`] = `
+<div>
+  <section
+    className="writing-banner"
+  >
+    <h1
+      className="writing-banner__heading"
+    >
+      Writing
+    </h1>
+  </section>
+  <section
+    className="site__section"
+  >
+    <blockquote
+      className="site__blockquote"
+    >
+      “Even when you're writing code explicitly intended for the machine, you're still writing. For other people. Fallible, flawed, distracted human beings just like you. And that's the truly difficult part.”
+      <cite
+        className="site__cite"
+      >
+        – Jeff Atwood, Co-founder, Stack Overflow
+      </cite>
+    </blockquote>
+    <p
+      className="site__paragraph-text"
+    >
+      I value good writing, and I strive to write well, whether it's emails to friends and colleagues, or op-eds to newspapers and magazines. I believe my writing skills help me write better code that's easy to understand and modify. During code reviews I often suggest ways to make code more readable, and I enjoy refactoring my own code to make it simpler.
+    </p>
+    <p
+      className="site__paragraph-text"
+    >
+      Below are some writing samples that provide an example of my voice, my personality, and my critical thinking skills.
+    </p>
+  </section>
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Press Release
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      <a
+        className="news-item"
+        href="https://runforvictimsofclimatechange.files.wordpress.com/2016/10/barbaraschlachter5kpressrelease.pdf"
+      >
+        <figure>
+          <img
+            alt="Screenshot of the Run/Walk for Climate Change Press Release"
+            className="news-item__thumbnail"
+            src=""
+          />
+          <figcaption
+            className="news-item__title"
+          >
+            Barbara Schlachter Run/Walk for Victims of Climate Change
+          </figcaption>
+        </figure>
+      </a>
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Op-Eds
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      As a member of my local newspaper's Writer’s Group, I regularly write 700-word op-eds on climate change issues. The 
+      <span
+        className="site__book-title"
+      >
+        Press-Citizen
+      </span>
+       newspaper has a potential audience of 150,000 people.
+    </p>
+    <p
+      className="site__paragraph-text"
+    >
+      <a
+        className="news-item -first-step"
+        href="http://www.press-citizen.com/story/opinion/contributors/guest-editorials/2014/09/16/time-join-iowa-city-peoples-climate-march/15698613/
+"
+      >
+        <figure>
+          <img
+            alt="Photo of First Step Toward Climate Action op-ed"
+            className="news-item__thumbnail"
+            src=""
+          />
+          <figcaption
+            className="news-item__title"
+          >
+            Take your first step toward climate action this Earth Day
+          </figcaption>
+        </figure>
+      </a>
+      <a
+        className="news-item -climate-march"
+        href="http://www.press-citizen.com/story/opinion/contributors/guest-editorials/2014/09/16/time-join-iowa-city-peoples-climate-march/15698613/
+"
+      >
+        <figure>
+          <img
+            alt="Photo of Iowa City Climate March op-ed"
+            className="news-item__thumbnail"
+            src=""
+          />
+          <figcaption
+            className="news-item__title"
+          >
+            Time to join the Iowa City people's climate march
+          </figcaption>
+        </figure>
+      </a>
+      <a
+        className="news-item"
+        href="http://www.press-citizen.com/story/opinion/contributors/guest-editorials/2016/04/20/climate-change-security-risk/83290412/"
+      >
+        <figure>
+          <img
+            alt="Photo of Climate Change is a Security Risk op-ed"
+            className="news-item__thumbnail"
+            src=""
+          />
+          <figcaption
+            className="news-item__title"
+          >
+            Climate change is a security risk
+          </figcaption>
+        </figure>
+      </a>
+      <a
+        className="news-item"
+        href="http://www.press-citizen.com/story/opinion/contributors/guest-editorials/2016/10/19/fee-and-dividend-plan-would-curb-climate-change/92416366/"
+      >
+        <figure>
+          <img
+            alt="Photo of Fee and Dividend op-ed"
+            className="news-item__thumbnail"
+            src=""
+          />
+          <figcaption
+            className="news-item__title"
+          >
+            Fee and dividend plan would curb climate change
+          </figcaption>
+        </figure>
+      </a>
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Letters to the Editor
+    </h2>
+    <p
+      className="letter-to-editor__paragraph-text"
+    >
+      <ZoomableImage
+        alt="Photo of More Coverage Needed letter to the editor"
+        className="letter-item__thumbnail -more-coverage"
+        img=""
+        parentClass="letter-item__thumbnail-container"
+      />
+      <ZoomableImage
+        alt="Photo of Supervisors letter to the editor"
+        className="letter-item__thumbnail -supervisors"
+        img=""
+        parentClass="letter-item__thumbnail-container"
+      />
+      <ZoomableImage
+        alt="Photo of School Board letter to the editor"
+        className="letter-item__thumbnail -school-board"
+        img=""
+        parentClass="letter-item__thumbnail-container"
+      />
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+</div>
+`;

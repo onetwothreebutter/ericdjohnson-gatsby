@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Visual Design Page should render correctly 1`] = `
+<div>
+  <section
+    className="visual-design-banner"
+  >
+    <h1
+      className="visual-design-banner__heading"
+    >
+      Visual Design
+    </h1>
+  </section>
+  <section
+    className="site__section"
+  >
+    <p
+      className="site__paragraph-text"
+    >
+      Here, I showcase some of the logos, stickers, and t-shirts I've designed in my spare time.
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Run/Walk 5k Logo
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      I designed this logo for a
+      <a
+        className="site__paragraph-link"
+        href="https://runforvictimsofclimatechange.org"
+        target="_blank"
+      >
+         charity run/walk
+      </a>
+      that I organized in April 2017. I tried to design the logo so that it was clear what the race participants were raising money for. I also tried to keep the level of detail down so it would work well on a t-shirt.
+    </p>
+    <p
+      className="site__paragraph-text"
+    >
+      <img
+        alt="Run/Walk for Climate Change logo"
+        className="work-example__image--5k-logo"
+        src=""
+      />
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Iowa Transplant Bumper Sticker
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      Iowa has a famous "Iowa Native" sticker. My wife is from Illinois but considers herself an Iowan now, so I designed this sticker for her. I've put it up for sale online and at a few local shops, and it's been pretty popular in the area.
+    </p>
+    <p>
+      <img
+        alt="Iowa Transplant logo"
+        className="site__image"
+        src=""
+      />
+      <figure
+        className="site__figure"
+      >
+        <img
+          alt="Random mini-van with Iowa Transplant stickers on it"
+          className="site__image"
+          src=""
+        />
+        <figcaption
+          className="site__caption"
+        >
+          A random mini-van I saw at a recreational area near Iowa City.
+        </figcaption>
+      </figure>
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Major League Reading
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      I love baseball, and I also love reading. I wanted to create a sticker that would help celebrate reading as much as people celebrate sports. The design was noticed by 
+      <a
+        className="site__paragraph-link"
+        href="http://www.signals.com/"
+        target="_blank"
+      >
+        Signals catalog
+      </a>
+      , and I licensed the design to them for a year. It's also available online and in local shops.
+    </p>
+    <p>
+      <img
+        alt="Major League Reading sticker"
+        className="site__image"
+        src=""
+      />
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Iowa City Book Festival
+    </h2>
+    <p
+      className="site__paragraph-text"
+    >
+      Due to my involvement in the local t-shirt scene and my wife's involvement in the Iowa City literary community, I was asked to do the t-shirts for the 2011 Iowa City Book Festival t-shirts. Below is the design I created using the festival's logo.
+    </p>
+    <img
+      alt="Iowa Book Festival logo"
+      className="site__image"
+      src=""
+    />
+  </section>
+  <hr
+    className="section-divider"
+  />
+</div>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Page should render correctly 1`] = `
+<div>
+  <div
+    className="homepage-background eric-and-elwood"
+  >
+    <div
+      className="just-eric"
+    />
+    <div
+      className="just-eric"
+    />
+    <div
+      className="just-eric"
+    />
+    <div
+      className="just-eric"
+    />
+    <div
+      className="just-eric"
+    />
+  </div>
+  <div
+    className="homepage-background-helper"
+  />
+  <div
+    className="easter-egg"
+  />
+  <div
+    className="easter-egg__video-container"
+  >
+    <div
+      className="easter-egg__video"
+      id="easter-egg__video"
+    />
+    <div
+      className="easter-egg__close"
+    >
+      ✕
+    </div>
+  </div>
+  <img
+    className="easter-egg__appendage"
+    src=""
+  />
+  <div
+    className="homepage-container"
+  >
+    <div
+      className="homepage-scaling-container"
+    >
+      <section
+        className="homepage-banner"
+      >
+        <h1
+          className="homepage-banner__heading"
+        >
+          Eric Johnson
+        </h1>
+        <div
+          className="homepage-banner__subheading"
+        >
+          Web Developer, UX Guy, 
+          <br />
+           Llama Enthusiast
+        </div>
+      </section>
+      <Menu />
+    </div>
+  </div>
+  <div
+    className="photo-focus"
+  >
+    <button
+      className="photo-focus__button -focus -active"
+    >
+      focus photo
+    </button>
+    <button
+      className="photo-focus__button -blur"
+    >
+      blur photo
+    </button>
+  </div>
+</div>
+`;
