@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact Me Page should render correctly 1`] = `
+<div>
+  <section
+    className="resume__banner"
+  >
+    <div
+      className="site__page-width"
+    >
+      <h1
+        className="resume__banner-heading"
+      >
+        Resume & Contact Info
+      </h1>
+      <PhotoCredit
+        image_url="http://unsplash.com/@helloimnik?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        name="Hello I'm Nik"
+      />
+    </div>
+  </section>
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Resume
+    </h2>
+    <p
+      className="resume__paragraph-text"
+    >
+      <object
+        data={Object {}}
+        style={
+          Object {
+            "display": "block",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        type="application/pdf"
+      />
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+  <section
+    className="site__section"
+  >
+    <h2
+      className="site__section-heading"
+    >
+      Contact Info
+    </h2>
+    <p
+      className="contact__paragraph-text"
+    >
+      <a
+        className="contact-link"
+        href="mailto:eric.d.johnson@gmail.com"
+      >
+        <[object Object]
+          alt="envelope with @ sign"
+          className="email-icon"
+          title="Icon made by https://www.flaticon.com/authors/ocha"
+        />
+        <span
+          className="contact-link__text"
+        >
+          eric.d.johnson@gmail.com
+        </span>
+      </a>
+    </p>
+    <p
+      className="contact__paragraph-text"
+    >
+      <a
+        className="contact-link"
+        href="tel:+13194009903"
+      >
+        <[object Object]
+          alt="cell phone"
+          className="phone-icon"
+          title="Icon made by https://www.flaticon.com/authors/freepik"
+        />
+        <span
+          className="contact-link__text"
+        >
+          (319) 400-9903
+        </span>
+      </a>
+    </p>
+    <p
+      className="contact__paragraph-text"
+    >
+      <a
+        className="contact-link"
+        href="https://www.linkedin.com/in/er1cj0hns0n/"
+      >
+        <img
+          alt="LinkedIn logo"
+          className="linked-in-logo"
+          src=""
+        />
+        <span
+          className="contact-link__text"
+        >
+          linkedin.com/in/er1cj0hns0n
+        </span>
+      </a>
+    </p>
+  </section>
+  <hr
+    className="section-divider"
+  />
+</div>
+`;

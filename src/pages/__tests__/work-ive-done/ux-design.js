@@ -2,11 +2,11 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import shallowToJson from 'enzyme-to-json'
 
-import IndexPage from '../index'
+import UXDesignPage from '../../work-ive-done/ux-design'
 
-test('Index Page should render correctly', () => {
+test('UX Design Page should render correctly', () => {
     const wrapper = shallow(
-        <IndexPage/>
+        <UXDesignPage/>
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

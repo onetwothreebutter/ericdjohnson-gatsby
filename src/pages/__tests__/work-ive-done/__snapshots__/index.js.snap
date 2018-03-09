@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Work Ive Done Page should render correctly 1`] = `
+<div>
+  <section
+    className="work__banner"
+  >
+    <div
+      className="work__page-width"
+    >
+      <h1
+        className="site__banner-heading"
+      >
+        Work I've Done
+      </h1>
+      <PhotoCredit
+        image_url="http://unsplash.com/@groosheck?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        name="Michał Grosicki"
+      />
+    </div>
+  </section>
+  <section
+    className="work-tiles"
+  >
+    <WorkTile
+      description="I love bringing the web to life!"
+      heading="Web Animation"
+      link="web-animations"
+      svg={<UNDEFINED />}
+    />
+    <WorkTile
+      description="My fun, reusable interface elements"
+      heading="UI Components"
+      link="ui-components"
+    />
+    <WorkTile
+      description="A couple of examples of UX improvement ideas"
+      heading="UX Design"
+      link="ux-design"
+    />
+    <WorkTile
+      description="Some of my bright ideas"
+      heading="Product Design"
+      link="product-design"
+    />
+    <WorkTile
+      description="Stickers, t-shirts, and logos I've designed"
+      heading="Visual Design"
+      link="visual-design"
+    />
+    <WorkTile
+      description="Good writing makes good code"
+      heading="Writing"
+      link="writing"
+    />
+  </section>
+</div>
+`;
