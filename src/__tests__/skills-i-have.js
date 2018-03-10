@@ -2,11 +2,11 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import shallowToJson from 'enzyme-to-json'
 
-import UIComponentsPage from '../../work-ive-done/ui-components'
+import SkillsIHavePage from '../pages/skills-i-have'
 
-test('UI Components Page should render correctly', () => {
+test('Skills I Have Page should render correctly', () => {
     const wrapper = shallow(
-        <UIComponentsPage/>
+        <SkillsIHavePage mocks={{skillsIHaveInit:function(){}}}/>
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

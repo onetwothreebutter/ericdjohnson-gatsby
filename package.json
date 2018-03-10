@@ -6,7 +6,7 @@
   "repository": "https://github.com/onetwothreebutter/ericdjohnson-gatsby.git",
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
-    "@jacobmischka/gatsby-plugin-react-svg": "github:jacobmischka/gatsby-plugin-react-svg",
+    "@jacobmischka/gatsby-plugin-react-svg": "^1.1.0",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-favicon": "^2.1.1",

@@ -26,7 +26,10 @@ class SkillsIHavePage extends React.Component {
 
     constructor(props) {
         super(props)
-        skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
+        if(props.mocks){
+            skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
+        }
+
     }
 
     componentDidMount() {

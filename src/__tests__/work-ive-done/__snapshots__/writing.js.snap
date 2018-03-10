@@ -87,7 +87,7 @@ exports[`Writing Page should render correctly 1`] = `
       </span>
        newspaper has a potential audience of 150,000 people.
     </p>
-    <p
+    <div
       className="site__paragraph-text"
     >
       <a
@@ -160,7 +160,7 @@ exports[`Writing Page should render correctly 1`] = `
           </figcaption>
         </figure>
       </a>
-    </p>
+    </div>
   </section>
   <hr
     className="section-divider"
@@ -180,19 +180,19 @@ exports[`Writing Page should render correctly 1`] = `
         alt="Photo of More Coverage Needed letter to the editor"
         className="letter-item__thumbnail -more-coverage"
         img=""
-        parentClass="letter-item__thumbnail-container"
+        parentClassName="letter-item__thumbnail-container"
       />
       <ZoomableImage
         alt="Photo of Supervisors letter to the editor"
         className="letter-item__thumbnail -supervisors"
         img=""
-        parentClass="letter-item__thumbnail-container"
+        parentClassName="letter-item__thumbnail-container"
       />
       <ZoomableImage
         alt="Photo of School Board letter to the editor"
         className="letter-item__thumbnail -school-board"
         img=""
-        parentClass="letter-item__thumbnail-container"
+        parentClassName="letter-item__thumbnail-container"
       />
     </p>
   </section>

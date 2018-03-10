@@ -2,11 +2,11 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import shallowToJson from 'enzyme-to-json'
 
-import ContactMePage from '../contact-me'
+import UIComponentsPage from '../../pages/work-ive-done/ui-components'
 
-test('Contact Me Page should render correctly', () => {
+test('UI Components Page should render correctly', () => {
     const wrapper = shallow(
-        <ContactMePage/>
+        <UIComponentsPage/>
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
