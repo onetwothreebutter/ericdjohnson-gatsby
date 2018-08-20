@@ -32,6 +32,11 @@
   width: calc(100% + var(--gap-horizontal) * 2)
   height: calc(100% + var(--gap-vertical) * 2)
   transform: translate3d(0, 0, 0)
+  animation-play-state: paused
+  animation-delay: 2s
+  .wf-brandonprinted-n4-active &,
+  .wf-brandonprinted-n4-inactive &
+    animation-play-state: running
   &:nth-child(n+2)
     opacity: 0
     animation-duration: var(--time-anim)

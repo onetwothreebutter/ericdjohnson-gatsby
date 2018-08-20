@@ -28,6 +28,18 @@ const UIComponentsPage = () => {
             <hr className="section-divider"/>
 
             <section className="site__section">
+                <h2 className="site__section-heading">Aperture-style Play Button</h2>
+                <p className="site__paragraph-text">This was inspired by a @keyframers episode. I animated clip-path to create the effect.
+                </p>
+                <div className="site__codepen-embed">
+                    <Codepen {...codependProps} height={785} hash="bKVxem"/>
+                </div>
+            </section>
+
+
+            <hr className="section-divider"/>
+
+            <section className="site__section">
                 <h2 className="site__section-heading">Animated Banner</h2>
                 <p className="site__paragraph-text">I designed the animations for this banner and figured out a way to make the background layers out
                     of a single repeating image. This allowed me more flexibility in animating the background.

@@ -1,6 +1,7 @@
 @import ../../../styles/page-layout
 @import ../../../styles/colors
 @import ../../../styles/breakpoints
+@import ../../../styles/animations
 
 
 body
@@ -59,6 +60,14 @@ footer
       text-align: left
 
 
+.footer__hand-made
+  opacity: 0
+  .homepage &
+    .wf-brandonprinted-n4-active &,
+    .wf-brandonprinted-n4-inactive &
+      --fade-sideways-distance: -2rem
+      animation: fade-in-and-sideways .5s .5s forwards
+
 @mixin footer__github-logo()
   width: 80px
   margin-left: 20px
@@ -76,5 +85,10 @@ footer
   display: none
   .homepage &
     display: inline
+    opacity: 0
+    .wf-brandonprinted-n4-active &,
+    .wf-brandonprinted-n4-inactive &
+      --fade-sideways-distance: -2rem
+      animation: fade-in-and-sideways .55s .52s forwards
   @media screen and (max-width: $mobile-portrait)
     margin-left: 10px

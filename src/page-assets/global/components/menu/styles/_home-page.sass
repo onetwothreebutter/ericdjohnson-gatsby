@@ -1,5 +1,6 @@
 @import ../../../styles/colors
 @import ../../../styles/breakpoints
+@import ../../../styles/animations
 
 
 //homepage menu breakpoints
@@ -24,6 +25,7 @@ $menu-fixed-size: 622px
     align-self: flex-start
     text-decoration: none
     color: $baby-blue
+    opacity: 0
     &:hover
       .menu-item__heading,
       .menu-item__mobile-heading
@@ -33,6 +35,14 @@ $menu-fixed-size: 622px
           box-shadow: inset 0 0 10px 50px
       .menu-item__sub-text
         transform: scale(1.3)
+    .wf-brandonprinted-n4-active &,
+    .wf-brandonprinted-n4-inactive &
+      --fade-vertical-distance: 4rem
+      animation: fade-in-and-vertical .5s forwards
+      @for $i from 1 through 5
+        &:nth-child(#{$i})
+          animation-delay: #{$i * 0.05s}
+          animation-duration: #{$i * .04s + .5s}
 
 
   @mixin menu-item__heading()
@@ -56,7 +66,7 @@ $menu-fixed-size: 622px
       left: 50%
       transform: translate(-50%, -50%)
       transition: 0.3s
-      z-index: -1
+      z-index: 0
     @media screen and (max-width: $menu-fixed-size)
       width: 7.5vw
       height: 7.5vw
