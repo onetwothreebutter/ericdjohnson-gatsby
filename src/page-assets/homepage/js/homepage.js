@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import { TimelineMax } from 'gsap'
 //imclude Draggable this way to avoid error during server side rendering
-// because it requires "navigator" in scope and gatsby build won't work
+// because it requires "navigator" in scope and `gatsby build` won't work
 try {
     var Draggable = require('gsap/Draggable');
 } catch (e) {
@@ -23,7 +23,6 @@ module.exports = function HomePage() {
         var $homepageContainer;
 
         function init() {
-            startLoadingAnimation();
             $(document).ready(function(){
                 $appendage = $('.easter-egg__appendage');
                 $homepageContainer = $('.homepage-scaling-container');
@@ -32,23 +31,17 @@ module.exports = function HomePage() {
             });
         }
 
-        function startLoadingAnimation() {
-            imagesLoaded('.homepage-background', function () {
-                $('body').addClass('-text-in-focus');
-            });
-        }
-
         function initBackgroundFocusButtons() {
-            $('.photo-focus__button').on('click', function (e) {
+            $('.glitch-eric__button').on('click', function (e) {
                 var $clickedButton = $(e.currentTarget);
                 $clickedButton.removeClass('-active');
 
-                if ($clickedButton.hasClass('-focus')) {
+                if ($clickedButton.data('glitch-action') === 'stop') {
                     $clickedButton.next().addClass('-active');
-                    $('body').removeClass('-text-in-focus');
+                    $('body').addClass('-glitch-stopped');
                 } else {
                     $clickedButton.prev().addClass('-active');
-                    $('body').addClass('-text-in-focus');
+                    $('body').removeClass('-glitch-stopped');
                 }
             });
         }
@@ -57,7 +50,7 @@ module.exports = function HomePage() {
             loadYoutubeAPI();
             keepDivOnMyNostril();
             setUpAppendage();
-            $('.easter-egg').on('click', tweenEasterEggVideo);
+            $('.easter-egg, #easter-egg-svg').on('click', tweenEasterEggVideo);
             $('.easter-egg__close').on('click', triggerAppendage);
         }
 
@@ -96,13 +89,6 @@ module.exports = function HomePage() {
             event.preventDefault();
             new TimelineMax()
                 .to($appendage, 0.4, {'bottom': '100vh', ease: Power2.easeIn}, 0);
-
-            var $body = $('body');
-            if(!$body.hasClass('-text-in-focus')) {
-                $body.addClass('-text-in-focus');
-                new TimelineMax()
-                    .set($homepageContainer, {scaleX: 1.0});
-            }
         }
 
         var youtubePlayer = null;

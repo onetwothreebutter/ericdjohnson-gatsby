@@ -20,7 +20,7 @@
   --gap-horizontal: 10px
   --gap-vertical: 5px
   --time-anim: 4s
-  --delay-anim: 2s
+  --delay-anim: 3s
 
 
 .just-eric
@@ -33,7 +33,8 @@
   height: calc(100% + var(--gap-vertical) * 2)
   transform: translate3d(0, 0, 0)
   animation-play-state: paused
-  animation-delay: 2s
+  .-glitch-stopped &
+    animation-play-state: paused !important
   .wf-brandonprinted-n4-active &,
   .wf-brandonprinted-n4-inactive &
     animation-play-state: running

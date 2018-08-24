@@ -38,11 +38,11 @@ $menu-fixed-size: 622px
     .wf-brandonprinted-n4-active &,
     .wf-brandonprinted-n4-inactive &
       --fade-vertical-distance: 4rem
-      animation: fade-in-and-vertical .5s forwards
+      animation: fade-in-and-vertical .4s forwards $base-easing
       @for $i from 1 through 5
         &:nth-child(#{$i})
-          animation-delay: #{$i * 0.05s}
-          animation-duration: #{$i * .04s + .5s}
+          animation-delay: #{$i * 0.05s + .3s}
+          animation-duration: #{$i * .04s + .3s}
 
 
   @mixin menu-item__heading()
@@ -66,7 +66,7 @@ $menu-fixed-size: 622px
       left: 50%
       transform: translate(-50%, -50%)
       transition: 0.3s
-      z-index: 0
+      z-index: -1
     @media screen and (max-width: $menu-fixed-size)
       width: 7.5vw
       height: 7.5vw

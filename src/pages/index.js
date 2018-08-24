@@ -8,6 +8,7 @@ import homePageMenuStyle from '../page-assets/global/components/menu/styles/_hom
 
 //images
 import cleanFoot from '../page-assets/homepage/images/clean-foot.png'
+import EasterEggSvg from '../page-assets/homepage/images/easter-egg.svg'
 
 
 class IndexPage extends React.Component {
@@ -26,7 +27,6 @@ class IndexPage extends React.Component {
                     <div className="just-eric"></div>
                     <div className="just-eric"></div>
                 </div>
-                <div className="homepage-background-helper"></div>
                 <div className="easter-egg">
                 </div>
                 <div className="easter-egg__video-container">
@@ -38,16 +38,21 @@ class IndexPage extends React.Component {
                     <div className="homepage-scaling-container">
                         <section className="homepage-banner">
                             <h1 className="homepage-banner__heading">Eric Johnson</h1>
-                            <div className="homepage-banner__subheading">Web Developer, UX Guy, <br/> Llama Enthusiast</div>
+                            <div className="homepage-banner__subheading">Web{'\u00A0'}Developer, UX{'\u00A0'}Guy, <br/> Llama{'\u00A0'}Enthusiast</div>
                         </section>
 
                         <Menu {...this.props}></Menu>
 
                     </div>
                 </div>
-                <div className="photo-focus">
-                    <button className="photo-focus__button -focus -active">focus photo</button>
-                    <button className="photo-focus__button -blur">blur photo</button>
+                <div className="glitch-egg-controls">
+                    <div className="glitch-eric">
+                        <button className="glitch-eric__button -active" data-glitch-action="stop">stop glitch</button>
+                        <button className="glitch-eric__button" data-glitch-action="start">start glitch</button>
+                    </div>
+                    <div className="easter-egg-container">
+                        <EasterEggSvg/>
+                    </div>
                 </div>
             </div>
         )
