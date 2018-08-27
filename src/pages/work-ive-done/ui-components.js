@@ -29,10 +29,10 @@ const UIComponentsPage = () => {
 
             <section className="site__section">
                 <h2 className="site__section-heading">Aperture-style Play Button</h2>
-                <p className="site__paragraph-text">This was inspired by a @keyframers episode. I animated clip-path to create the effect.
+                <p className="site__paragraph-text">I designed and coded this button, but it was inspired by this <a href="https://codepen.io/shshaw/pen/BxLbqO/">@keyframers codepen/episode</a>. I decided to deviate from the apparoch used in the @keyframers codepen, and instead, animate CSS clip-path to create the aperture effect.
                 </p>
                 <div className="site__codepen-embed">
-                    <Codepen {...codependProps} height={785} hash="bKVxem"/>
+                    <Codepen {...codependProps} height={385} hash="bKVxem"/>
                 </div>
             </section>
 
