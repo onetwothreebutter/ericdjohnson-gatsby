@@ -40,6 +40,18 @@ const UIComponentsPage = () => {
             <hr className="section-divider"/>
 
             <section className="site__section">
+                <h2 className="site__section-heading">Cornerstone Main Navigation</h2>
+                <p className="site__paragraph-text">I coded this navigation, and designed and coded the product sub-navigation animation. Additionally, I used a redux-like pattern for managing the state of the menu in javascript. (note: you'll have to view the below Codepen at 0.5x to see the navigation)
+                </p>
+                <div className="site__codepen-embed">
+                    <Codepen {...codependProps} height={385} hash="WKajeo"/>
+                </div>
+            </section>
+
+
+            <hr className="section-divider"/>
+
+            <section className="site__section">
                 <h2 className="site__section-heading">Animated Banner</h2>
                 <p className="site__paragraph-text">I designed the animations for this banner and figured out a way to make the background layers out
                     of a single repeating image. This allowed me more flexibility in animating the background.
