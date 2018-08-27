@@ -50,19 +50,24 @@ footer
   @include site__page-width()
   display: flex
   align-items: center
+  justify-content: space-between
+  width: 100%
+  margin: auto
+  padding: 0 20px
   .homepage &
     max-width: none
     display: flex
     align-items: center
+    width: auto
   @media screen and (max-width: $mobile-portrait)
-    text-align: center
+    padding: 0 10px
     .homepage &
       text-align: left
 
 
 .footer__hand-made
-  opacity: 0
   .homepage &
+    opacity: 0
     .wf-brandonprinted-n4-active &,
     .wf-brandonprinted-n4-inactive &
       --fade-sideways-distance: -2rem
