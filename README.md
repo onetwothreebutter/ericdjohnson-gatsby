@@ -1,6 +1,6 @@
 # Eric Johnson's Portfolio Site, NOW IN REACT!
 
-##Introduction
+## Introduction
 
 I wanted to do a project in React and I ran across [Gatsby](https://www.gatsbyjs.org/), Facebook's React-based 
 static site generator. Gatsby looked like a slick project with a lot of traction, and it seemed like a good fit to 
@@ -13,7 +13,7 @@ and [I created an issue](https://github.com/gatsbyjs/gatsby/issues/3665) with th
 gatsby-plugin-sass plugin.
 
 
-##Local Setup
+## Local Setup
 You can clone this repo and run
 * `npm install`
 * `npm install -g gatsby cli`
