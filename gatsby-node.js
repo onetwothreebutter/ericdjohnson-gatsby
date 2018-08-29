@@ -14,13 +14,21 @@ exports.modifyWebpackConfig = function (_ref, options) {
     options['sourceMap'] = 'sourceMap';
     var sassLoader = `sass?${JSON.stringify(options)}`;
 
+    config.merge({
+        postcss(wp) {
+            return [
+                require('postcss-cssnext')({ browsers: ['last 2 versions', '> 2%']}),
+            ]
+        },
+    });
+
     switch (stage) {
         case `develop`:
         {
             config.loader(`sass`, {
                 test: sassFiles,
                 exclude: sassModulesFiles,
-                loaders: [`style`, `css`, 'resolve-url-loader', sassLoader]
+                loaders: [`style`, `css`, `resolve-url-loader`, `postcss`, sassLoader]
             });
             return config;
         }
@@ -29,12 +37,12 @@ exports.modifyWebpackConfig = function (_ref, options) {
             config.loader(`sass`, {
                 test: sassFiles,
                 exclude: sassModulesFiles,
-                loader: ExtractTextPlugin.extract([`css?minimize`, 'resolve-url-loader', sassLoader])
+                loader: ExtractTextPlugin.extract([`css?minimize`, `resolve-url-loader`, `postcss`, sassLoader])
             });
 
             config.loader(`sassModules`, {
                 test: sassModulesFiles,
-                loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), 'resolve-url-loader', sassLoader])
+                loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), `resolve-url-loader`, sassLoader])
             });
             return config;
         }
