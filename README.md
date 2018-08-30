@@ -60,3 +60,10 @@ I like this approach because it gives you an easily searchable and authoritative
  ## Testing
  Jest and GhostInspector (more details forthcoming...)
 
+ ## TODO
+ - Remove duplicate generated CSS
+ - Convert pixels to REMs
+ - Implement smoother font loading
+ - Add variable fonts
+ - Improve copy with pull quotes, icons, and other flourishes
+ - Add Cypress tests
