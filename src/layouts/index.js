@@ -6,7 +6,6 @@ import Footer from '../page-assets/global/components/footer/footer'
 import Menu from '../page-assets/global/components/menu/menu'
 
 
-
 class TemplateWrapper extends React.Component {
 
     componentDidMount() {
@@ -44,7 +43,7 @@ class TemplateWrapper extends React.Component {
                     title="Eric Johnson, Web Developer/UX Guy/Creative Person"
                     meta={[
                         { name: 'description', content: 'Eric Johnson\'s portfolio of web animations, code, and other skills.'  },
-                        { name: 'keywords', content: 'web developer, portfolio' },
+                        { name: 'keywords', content: 'frontend web developer, portfolio' },
                     ]}
                 >
                 </Helmet>

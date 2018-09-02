@@ -1,4 +1,6 @@
 import React from 'react'
+import Charming from 'charming'
+import Splitting from 'splitting'
 
 import WorkTile from '../../page-assets/work-ive-done/components/work-tile'
 import PhotoCredit from '../../page-assets/global/components/photo-credit'
@@ -10,13 +12,30 @@ import workIveDoneStyles from '../../page-assets/work-ive-done/styles/work-ive-d
 
 class WorkIveDonePage extends React.Component {
 
-    render() {
+    constructor(props){
+        super(props);
+        this.headingEl = null;
+        this.setHeadingElRef = element => {
+            this.headingEl = element;
+        };
+    }
 
+
+
+    componentDidMount() {
+        Charming(this.headingEl, {
+            tagName: 'span',
+            classPrefix: 'letter'
+        });
+       // Splitting();
+    }
+
+    render() {
         return (
             <div>
                 <section className="work__banner">
                     <div className="work__page-width">
-                        <h1 className="site__banner-heading">
+                        <h1 className="site__banner-heading" data-splitting ref={this.setHeadingElRef}>
                             Work I've Done
                         </h1>
                         <PhotoCredit name="Michał Grosicki" image_url="http://unsplash.com/@groosheck?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"/>

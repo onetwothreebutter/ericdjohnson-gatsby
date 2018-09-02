@@ -14,6 +14,38 @@ $ease-in-fast: ease-in-out
   @media screen and (max-width: $mobile-portrait)
     background-image: url(../images/michal-grosicki-221225--mobile.jpg)
 
+.site__banner-heading
+  span
+    font-family: inherit
+    display: inline-block
+    &:nth-child(2n)
+      animation: letter-up 1s both
+    &:nth-child(2n + 1)
+      animation: letter-down 1s both
+    &:last-child
+      animation: last-letter 2.2s both
+      animation-delay: 0ms !important
+
+    @for $i from 1 through 20
+      &:nth-child(#{$i})
+        animation-delay: $i * 80ms
+
+
+@keyframes letter-up
+  from
+    transform: translateY(2rem)
+    opacity: 0
+
+@keyframes letter-down
+  from
+    transform: translateY(-2rem)
+    opacity: 0
+
+@keyframes last-letter
+  from
+    transform: translateX(-20rem)
+    opacity: 0
+
 
 .work__page-width
   @include site__page-width()

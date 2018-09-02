@@ -31,6 +31,7 @@ module.exports = class HTML extends React.Component {
                 />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
                 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ledger" rel="stylesheet"></link>
+                <script>Splitting();</script>
                 {this.props.headComponents}
                 {css}
             </head>

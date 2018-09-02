@@ -7,6 +7,7 @@
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@jacobmischka/gatsby-plugin-react-svg": "^1.1.0",
+    "charming": "^2.2.4",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-favicon": "^2.1.1",
@@ -24,6 +25,7 @@
     "react-codepen-embed": "^0.1.0",
     "react-svg-inline": "^2.1.0",
     "react-youtube": "^7.5.0",
+    "splitting": "^1.0.5",
     "svg-react-loader": "^0.4.5"
   },
   "keywords": [
