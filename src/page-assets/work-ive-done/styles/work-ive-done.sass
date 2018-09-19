@@ -23,6 +23,11 @@ $ease-in-fast: ease-in-out
       &[style*="--char-index:#{$i}"]
         @include conan-letters($i, $total-chars)
 
+    @media screen and (max-width: $mobile-portrait)
+      @for $i from 0 through ($total-chars - 1)
+        &[style*="--char-index:#{$i}"]
+          @include conan-letters($i, $total-chars, 8, 9)
+
 
 .work__page-width
   @include site__page-width()

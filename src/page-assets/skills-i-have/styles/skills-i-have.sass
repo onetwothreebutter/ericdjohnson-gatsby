@@ -57,11 +57,10 @@ $adjust-banner-background-image--tablet: 870px
 .skills-banner__heading
   @include site-banner__heading--animated()
   .char
-    @media screen and (min-width: $mobile-portrait)
-      $total-chars: 11
-      @for $i from 0 through ($char-total - 1)
-        &[style*="--char-index:#{$i}"]
-          @include conan-letters($i, $total-chars, 5, 7)
+    $total-chars: 11
+    @for $i from 0 through ($total-chars - 1)
+      &[style*="--char-index:#{$i}"]
+        @include conan-letters($i, $total-chars, 5, 7)
 
 
 
