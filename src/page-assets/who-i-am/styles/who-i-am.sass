@@ -5,16 +5,25 @@
 @import ../../global/styles/banner
 @import ../../global/styles/lists
 @import ../../global/styles/images
+@import ../../global/components/animated-heading/styles/animated-heading
 
 
 
 .who-banner
-  @include site__banner()
+  @include site-banner()
   background-image: url(../images/kristopher-roller-188180.jpg)
   background-repeat: no-repeat
   @media screen and (max-width: $mobile-portrait)
     background-image: url(../images/kristopher-roller-188180--mobile.jpg)
     background-position-x: center
+
+.who-banner__heading
+  @include site-banner__heading--animated(#345663)
+  .char
+    @for $i from 0 through 5
+      &[style*="--char-index:#{$i}"]
+        @include conan-letters($i, 6)
+
 
 .who-i-am__image
   @include site__image()

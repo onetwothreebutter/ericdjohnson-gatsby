@@ -61,6 +61,8 @@ I like this approach because it gives you an easily searchable and authoritative
  Jest and GhostInspector (more details forthcoming...)
 
  ## TODO
+ - Upgrade to Gatsby 2
+ - Convert CSS to Styled Components
  - Responsive images
  - Remove duplicate generated CSS
  - Convert pixels to REMs
@@ -69,3 +71,4 @@ I like this approach because it gives you an easily searchable and authoritative
  - Add variable fonts
  - Improve copy with pull quotes, icons, and other flourishes
  - Add Cypress tests
+ - Remove jQuery

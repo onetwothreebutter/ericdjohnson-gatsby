@@ -3,6 +3,7 @@
 @import ../../global/styles/page-layout
 @import ../../global/styles/typography
 @import ../../global/styles/breakpoints
+@import ../../global/components/animated-heading/styles/animated-heading
 
 
 // Breakpoints for this page
@@ -10,7 +11,7 @@ $shift-bird-background: 1033px
 
 
 .what-banner
-  @include site__banner()
+  @include site-banner()
   background-image: url(../images/ray-hennessy-233399.jpg)
   background-repeat: no-repeat
   background-position-y: -123px
@@ -19,3 +20,11 @@ $shift-bird-background: 1033px
   @media screen and (max-width: $mobile-portrait)
     background-image: url(../images/ray-hennessy-233399--mobile.jpg)
     background-position-y: top
+
+.what-banner__heading
+  @include site-banner__heading--animated(#6d6048)
+  .word
+    .char
+      @for $i from 0 through 16
+        &[style*="--char-index:#{$i}"]
+          @include conan-letters($i, 17, 4, 6)

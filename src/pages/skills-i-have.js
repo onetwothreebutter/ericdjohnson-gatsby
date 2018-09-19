@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimatedHeading from '../page-assets/global/components/animated-heading/animated-heading'
 import PhotoCredit from '../page-assets/global/components/photo-credit'
 //include in try/catch because getting "window not defined error" when building with `gatsby build`
 try {
@@ -41,9 +42,7 @@ class SkillsIHavePage extends React.Component {
             <div>
                 <section className="skills-banner">
                     <div className="skills-banner__page-width">
-                        <h1 className="site__banner-heading">
-                            Skills I Have
-                        </h1>
+                        <AnimatedHeading headingText="Skills I Have" headingClassName="skills-banner__heading"/>
                         <PhotoCredit name="Jakob Owens" image_url="http://unsplash.com/@jakobowens1?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"/>
                     </div>
                     <div className="skills-banner__background"></div>

@@ -3,17 +3,22 @@
 @import ../../global/styles/page-layout
 @import ../../global/styles/typography
 @import ../../global/styles/breakpoints
+@import ../../global/components/animated-heading/styles/animated-heading
 
 
-.resume__banner
-  @include site__banner()
+.resume-banner
+  @include site-banner()
   background-image: url(../images/hello-i-m-nik-281498.jpg)
   background-repeat: no-repeat
   @media screen and (max-width: $mobile-portrait)
     background-image: url(../images/hello-i-m-nik-281498--mobile.jpg)
 
-.resume__banner-heading
-  @include site__banner-heading(#737373)
+.resume-banner__heading
+  @include site-banner__heading--animated(#737373)
+  .char
+    @for $i from 0 through 5
+      &[style*="--char-index:#{$i}"]
+        @include conan-letters($i, 6)
 
 .resume__paragraph-text
   @include site__paragraph-text()

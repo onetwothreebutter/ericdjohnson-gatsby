@@ -1,4 +1,4 @@
-@mixin site__banner()
+@mixin site-banner()
   position: relative
   display: flex
   justify-content: center
@@ -17,34 +17,34 @@
   @media screen and (max-width: 480px)
     height: 350px
 
-.site__banner
-  @include site__banner()
+.site-banner
+  @include site-banner()
 
 
 
-@mixin site__banner-heading($text-glow-color: #000000)
+@mixin site-banner__heading($text-glow-color: #000000)
   position: relative
   margin: auto
   color: white
-  text-shadow: 0 0 45px $text-glow-color
-  font-size: 60px
-  z-index: 1
   font-family: 'BrandonPrinted', sans-serif
+  text-shadow: 0 0 15px $text-glow-color
+  font-size: 80px
+  z-index: 1
   @media screen and (max-width: 480px)
     font-size: 50px
     text-shadow: 0 0 25px $text-glow-color
     line-height: 1
 
-.site__banner-heading
-  @include site__banner-heading()
+.site-banner__heading
+  @include site-banner__heading()
 
 
 
-@mixin site__photo-credit()
+@mixin site-banner__photo-credit()
   position: absolute
   bottom: 10px
   right: 10px
   letter-spacing: 5px
 
-.site__photo-credit
-  @include site__photo-credit()
+.site-banner__photo-credit
+  @include site-banner__photo-credit()

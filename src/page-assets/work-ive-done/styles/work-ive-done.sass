@@ -2,49 +2,26 @@
 @import ../../global/styles/typography
 @import ../../global/styles/banner
 @import ../../global/styles/breakpoints
+@import ../../global/components/animated-heading/styles/animated-heading
 
 
 $ease-in-fast: ease-in-out
 
 
-.work__banner
-  @include site__banner()
+.work-banner
+  @include site-banner()
   background-image: url(../images/michal-grosicki-221225.jpg)
   margin-bottom: 0
   @media screen and (max-width: $mobile-portrait)
     background-image: url(../images/michal-grosicki-221225--mobile.jpg)
 
-.site__banner-heading
-  span
-    font-family: inherit
-    display: inline-block
-    &:nth-child(2n)
-      animation: letter-up 1s both
-    &:nth-child(2n + 1)
-      animation: letter-down 1s both
-    &:last-child
-      animation: last-letter 2.2s both
-      animation-delay: 0ms !important
-
-    @for $i from 1 through 20
-      &:nth-child(#{$i})
-        animation-delay: $i * 80ms
-
-
-@keyframes letter-up
-  from
-    transform: translateY(2rem)
-    opacity: 0
-
-@keyframes letter-down
-  from
-    transform: translateY(-2rem)
-    opacity: 0
-
-@keyframes last-letter
-  from
-    transform: translateX(-20rem)
-    opacity: 0
+.work-banner__heading
+  @include site-banner__heading--animated()
+  .char
+    $total-chars: 12
+    @for $i from 0 through ($total-chars - 1)
+      &[style*="--char-index:#{$i}"]
+        @include conan-letters($i, $total-chars)
 
 
 .work__page-width

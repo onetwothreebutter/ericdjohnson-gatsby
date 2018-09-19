@@ -5,6 +5,7 @@
 @import ../../global/styles/typography
 @import ../../global/styles/images
 @import ../../global/styles/breakpoints
+@import ../../global/components/animated-heading/styles/animated-heading
 
 
 // Breakpoints for this page
@@ -13,7 +14,7 @@ $adjust-banner-background-image--tablet: 870px
 
 
 .skills-banner
-  @include site__banner()
+  @include site-banner()
   overflow: hidden
   background-color: #1b1f13
   &:before
@@ -52,6 +53,16 @@ $adjust-banner-background-image--tablet: 870px
   transition: 1s
   .-water-effect-loaded &
     opacity: 0
+
+.skills-banner__heading
+  @include site-banner__heading--animated()
+  .char
+    @media screen and (min-width: $mobile-portrait)
+      $char-total: 11
+      @for $i from 0 through ($char-total - 1)
+        &[style*="--char-index:#{$i}"]
+          @include conan-letters($i, $char-total, 5, 7)
+
 
 
 // Web Skills section

@@ -1,0 +1,45 @@
+@import ../../../styles/banner
+
+
+@mixin site-banner__heading--animated($text-glow-color: #000000)
+  @include site-banner__heading($text-glow-color)
+  .word
+    position: relative
+    display: inline-block
+    font-family: inherit
+    .char
+      transition: 1s transform cubic-bezier(0.135, 0.745, 0.000, 0.995), 0.3s opacity
+      font-family: inherit
+      display: inline-block
+      opacity: 0
+      .-animate-banner-heading &
+        .wf-brandonprinted-n4-active &
+          transform: translateX(0) translateZ(0) scale(1) perspective(10em) !important
+          opacity: 1
+
+
+
+//approximation of the Conan O'Brien logo animation: ____
+@mixin conan-letters($index, $total, $squishy-lower: 0, $squishy-upper: 0, $squishy-mid: 0)
+
+  //add the squish effect to just the center 2 or center 3 items depending on number of letter
+  @if($squishy-lower == 0)
+    $squishy-lower: floor($total / 2) - 1
+    $squishy-upper: ceil($total / 2) + 1
+
+  //use floor to coerce to round number on odd-length strings
+  $squishy-mid: floor((($squishy-upper - $squishy-lower) / 2) + $squishy-lower)
+
+  $letter-spacing-scale: 8
+  $moddedIndex: $total - $index
+  @if($index < $squishy-lower)
+    transform: translateX(calc((#{$letter-spacing-scale} / #{$index + 1}) * -1em))
+  @else if ($index >= $squishy-lower and $index < $squishy-mid)
+    transform: translateX(calc((#{$letter-spacing-scale} / #{$index + 1}) * -1em)) translateZ(-8.75em) perspective(10em)
+  @else if ($total % 2 != 0 and $index == $squishy-mid)
+    transform: translateX(0) translateZ(-18.75em) perspective(10em)
+    transform-origin: center bottom
+  @else if ($index >= $squishy-mid and $index < $squishy-upper)
+    transform: translateX(calc((#{$letter-spacing-scale} / #{$moddedIndex}) * 1em)) translateZ(-8.75em) perspective(10em)
+  @else
+    transform: translateX(calc((#{$letter-spacing-scale} / #{$moddedIndex}) * 1em))

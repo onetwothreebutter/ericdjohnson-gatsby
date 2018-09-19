@@ -9,7 +9,7 @@ const PhotoCredit = ({name, image_url}) => {
 
     return (
         <div>
-            <a className="site__photo-credit" style={aStyle} href={image_url} target="_blank" rel="noopener noreferrer" title="`Download free do whatever you want high-resolution photos from ${name}`">
+            <a className="site-banner__photo-credit" style={aStyle} href={image_url} target="_blank" rel="noopener noreferrer" title="`Download free do whatever you want high-resolution photos from ${name}`">
             <span style={spanStyle}>
                 <svg xmlns="http://www.w3.org/2000/svg" style={svgStyle} viewBox="0 0 32 32">
                     <title></title>

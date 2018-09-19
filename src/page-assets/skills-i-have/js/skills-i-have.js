@@ -10,6 +10,7 @@ function initSkillsBanner() {
 
     $(document).ready(function(){
         var $body = $('body');
+        $body.removeClass('-water-effect-loaded');
         imagesLoaded($body, function() {
             $body.addClass('-water-effect-loaded');
         });
