@@ -59,7 +59,7 @@ $adjust-banner-background-image--tablet: 870px
   .char
     $total-chars: 11
     @for $i from 0 through ($total-chars - 1)
-      &[style*="--char-index:#{$i}"]
+      &[style*="--char-index:#{$i}"], &[style*="--char-index: #{$i}"]
         @include conan-letters($i, $total-chars, 5, 7)
 
 

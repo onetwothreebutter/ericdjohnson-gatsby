@@ -22,7 +22,7 @@
   .char
     $total-chars: 6
     @for $i from 0 through ($total-chars - 1)
-      &[style*="--char-index:#{$i}"]
+      &[style*="--char-index:#{$i}"], &[style*="--char-index: #{$i}"]
         @include conan-letters($i, $total-chars)
 
 
