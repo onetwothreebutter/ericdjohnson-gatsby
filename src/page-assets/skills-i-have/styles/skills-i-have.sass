@@ -58,10 +58,10 @@ $adjust-banner-background-image--tablet: 870px
   @include site-banner__heading--animated()
   .char
     @media screen and (min-width: $mobile-portrait)
-      $char-total: 11
+      $total-chars: 11
       @for $i from 0 through ($char-total - 1)
         &[style*="--char-index:#{$i}"]
-          @include conan-letters($i, $char-total, 5, 7)
+          @include conan-letters($i, $total-chars, 5, 7)
 
 
 
