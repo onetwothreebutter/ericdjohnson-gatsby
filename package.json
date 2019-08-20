@@ -17,7 +17,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gsap": "^1.20.3",
     "imagesloaded": "^4.1.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "moment": "^2.20.1",
     "number-to-words": "^1.2.3",
     "pixi.js": "^4.7.0",
@@ -26,7 +26,7 @@
     "react-svg-inline": "^2.1.0",
     "react-youtube": "^7.5.0",
     "splitting": "^1.0.5",
-    "svg-react-loader": "^0.4.5"
+    "svg-react-loader": "^0.4.6"
   },
   "keywords": [
     "gatsby"
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
-    "canvas-prebuilt": "^1.6.5-prerelease.1",
+    "canvas-prebuilt": "^1.6.11",
     "enzyme": "^3.5.0",
     "enzyme-adapter-react-15": "^1.1.0",
     "enzyme-to-json": "^3.3.1",
