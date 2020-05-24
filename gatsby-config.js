@@ -3,8 +3,12 @@ module.exports = {
     title: `Eric Johnson's Portfolio`,
   },
   plugins: [
-      `gatsby-plugin-react-helmet`,
-      `@jacobmischka/gatsby-plugin-react-svg`,
+      {
+        resolve: `gatsby-plugin-react-helmet`,
+      },
+      {
+        resolve: `@jacobmischka/gatsby-plugin-react-svg`,
+      },
       {
           resolve: `gatsby-plugin-favicon`,
           options: {
@@ -22,6 +26,12 @@ module.exports = {
                   windows: false
               }
           }
-      }
+      },
+    {
+      resolve: `gatsby-plugin-eslint`
+    },
+    {
+      resolve: `gatsby-plugin-sass`
+    }
   ]
 }

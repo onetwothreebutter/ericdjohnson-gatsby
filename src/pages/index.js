@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
                     <div className="homepage-scaling-container">
                         <section className="homepage-banner">
                             <h1 className="homepage-banner__heading">Eric Johnson</h1>
-                            <div className="homepage-banner__subheading">Web{'\u00A0'}Developer, UX{'\u00A0'}Guy, <br/> Llama{'\u00A0'}Enthusiast</div>
+                            <div className="homepage-banner__subheading">Web{'\u00A0'}Developer and Vanquisher of Boring Websites</div>
                         </section>
 
                         <Menu {...this.props}></Menu>
