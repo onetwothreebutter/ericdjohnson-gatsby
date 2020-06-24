@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function HTML(props) {
   return (
@@ -12,7 +12,10 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ledger" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css?family=Dancing+Script|Ledger"
+          rel="stylesheet"
+        ></link>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
