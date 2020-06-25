@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import AnimatedHeading from '../page-assets/global/components/animated-heading/animated-heading'
 import PhotoCredit from '../page-assets/global/components/photo-credit'
 
-import skillsIHaveInit from '../page-assets/skills-i-have/js/skills-i-have';
+//import skillsIHaveInit from '../page-assets/skills-i-have/js/skills-i-have';
 //include in try/catch because getting "window not defined error" when building with `gatsby build`
 // try {
 //   var skillsIHaveInit = require('../page-assets/skills-i-have/js/skills-i-have')
@@ -23,10 +23,10 @@ import cutoutImage from '../page-assets/skills-i-have/images/cardboard-cutout.jp
 import Layout from '../components/layout'
 
 const SkillsIHavePage = (props) => {
-  console.log(props);
-  if (props.mocks) {
-    skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
-  }
+  // console.log(props);
+  // if (props.mocks) {
+  //   skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
+  // }
 
   useEffect(() => {
     //skillsIHaveInit()
