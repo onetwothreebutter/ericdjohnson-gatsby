@@ -1,10 +1,6 @@
 import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
-
-//include in try/catch because getting "window not defined error" when building with `gatsby build`
-if (typeof window !== 'undefined') {
-  const Splitting = require('splitting')
-}
+import { Helmet } from "react-helmet"
 
 //Animations are stored in _banner.sass and sass files for each inner page (eg, work-ive-done.sass)
 
@@ -21,6 +17,12 @@ const AnimatedHeading = ({headingClassName, headingText}) => {
 
   return (
     <div>
+      <Helmet>
+        <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js" />
+        <script>
+          console.log('heyo');
+        </script>
+      </Helmet>
       <h1 className={headingClassName} data-splitting="">
         {headingText}
       </h1>
