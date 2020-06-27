@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/layout'
-import AnimatedHeading from '../../page-assets/global/components/animated-heading/animated-heading'
+import AnimatedHeading from '../../page-assets/global/components/animated-heading/loadable-animated-heading'
 import WorkTile from '../../page-assets/work-ive-done/components/work-tile'
 import PhotoCredit from '../../page-assets/global/components/photo-credit'
 //svg for the "Web Animation" tile

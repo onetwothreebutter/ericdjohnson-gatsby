@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from "react-helmet"
+import Splitting from 'splitting'
+
+import Loadable from "@loadable/component"
 
 //Animations are stored in _banner.sass and sass files for each inner page (eg, work-ive-done.sass)
 
@@ -17,12 +19,6 @@ const AnimatedHeading = ({headingClassName, headingText}) => {
 
   return (
     <div>
-      <Helmet>
-        <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js" />
-        <script>
-          console.log('heyo');
-        </script>
-      </Helmet>
       <h1 className={headingClassName} data-splitting="">
         {headingText}
       </h1>

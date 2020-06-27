@@ -1,7 +1,6 @@
 import React from 'react'
-import AnimatedHeading from '../page-assets/global/components/animated-heading/animated-heading'
+import AnimatedHeading from '../page-assets/global/components/animated-heading/loadable-animated-heading'
 import PhotoCredit from '../page-assets/global/components/photo-credit'
-import numberToWords from 'number-to-words'
 import moment from 'moment'
 
 //styles
