@@ -16,6 +16,10 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Dancing+Script|Ledger"
           rel="stylesheet"
         ></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+          console.log('aaaa');
+        </script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

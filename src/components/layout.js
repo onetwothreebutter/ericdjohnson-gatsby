@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../page-assets/global/components/header/header'
 import Footer from '../page-assets/global/components/footer/footer'

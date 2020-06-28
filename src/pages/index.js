@@ -43,7 +43,7 @@ const IndexPage = props => {
   ];
 
   useEffect(() => {
-    //HomePage().init()
+    HomePage().init()
   }, [])
 
   return (
@@ -54,7 +54,6 @@ const IndexPage = props => {
         className="homepage-background eric-and-elwood"
         fluid={imageSources}
         style={{position: 'absolute'}}
-        onLoad={HomePage().init()}
       >
         <div className="just-eric" />
         <div className="just-eric" />
