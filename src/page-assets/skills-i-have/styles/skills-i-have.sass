@@ -17,10 +17,9 @@ $adjust-banner-background-image--tablet: 870px
   @include site-banner()
   overflow: hidden
   background-color: #1b1f13
-  &:before
-    display: none
-  @media screen and (max-width: $mobile-portrait)
-    background-image: url(../images/jakob-owens-299038--mobile.jpg)
+  &:before,
+  &:after
+    z-index: 2 !important
   @media screen and (max-width: $adjust-banner-background-image--tablet)
     background-position: center
   @media screen and (min-width: $adjust-banner-background-image--larger-screens)
@@ -43,7 +42,6 @@ $adjust-banner-background-image--tablet: 870px
   bottom: 0
   left: 0
   right: 0
-  background-image: url(../images/jakob-owens-299038.jpg)
   background-color: #1c1f16
   background-repeat: no-repeat
   background-position: center

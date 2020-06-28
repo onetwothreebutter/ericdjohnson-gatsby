@@ -3,6 +3,9 @@ import Menu from '../page-assets/global/components/menu/menu'
 import HomePage from '../page-assets/homepage/js/homepage'
 import Layout from '../components/layout'
 
+import BackgroundImage from 'gatsby-background-image'
+import { graphql, useStaticQuery } from 'gatsby'
+
 //styles
 import '../page-assets/homepage/styles/homepage.sass'
 import '../page-assets/global/components/menu/styles/_home-page.sass'
@@ -12,19 +15,53 @@ import cleanFoot from '../page-assets/homepage/images/clean-foot.png'
 import EasterEggSvg from '../page-assets/homepage/images/easter-egg.inline.svg'
 
 const IndexPage = props => {
+
+  const bgImageData = useStaticQuery(graphql`
+  query HomepageQuery {
+    desktop: file(relativePath: { eq: "homepage/images/eric-and-elwood-2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "homepage/images/eric-and-elwood-2.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
+
   useEffect(() => {
-    HomePage().init()
+    //HomePage().init()
   }, [])
 
   return (
     <Layout pageType="homepage">
-      <div className="homepage-background eric-and-elwood">
+      <BackgroundImage
+        Tag="div"
+        backgroundColor="gray"
+        className="homepage-background eric-and-elwood"
+        fluid={imageSources}
+        style={{position: 'absolute'}}
+        onLoad={HomePage().init()}
+      >
         <div className="just-eric" />
         <div className="just-eric" />
         <div className="just-eric" />
         <div className="just-eric" />
         <div className="just-eric" />
-      </div>
+      </BackgroundImage>
       <div className="easter-egg"></div>
       <div className="easter-egg__video-container">
         <div id="easter-egg__video" className="easter-egg__video"></div>

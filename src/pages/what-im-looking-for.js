@@ -9,10 +9,42 @@ import '../page-assets/what-im-looking-for/styles/what-im-looking-for.sass'
 //...
 import Layout from '../components/layout'
 
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
+
 const WhatImLookingForPage = () => {
+
+  const bgImageData = useStaticQuery(graphql`
+  query LookingForQuery {
+    desktop: file(relativePath: { eq: "what-im-looking-for/images/ray-hennessy-233399.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "what-im-looking-for/images/ray-hennessy-233399--mobile.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
+
+  const bgCssOveride = { backgroundPosition: 'top'};
+
     return (
       <Layout>
-        <section className="what-banner">
+        <BackgroundImage Tag="section" className="what-banner" fluid={imageSources} style={bgCssOveride}>
           <div className="site__page-width">
             <AnimatedHeading
               headingText="What I'm Looking For"
@@ -23,7 +55,7 @@ const WhatImLookingForPage = () => {
               image_url="http://unsplash.com/@rayhennessy?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
             />
           </div>
-        </section>
+        </BackgroundImage>
 
         <section className="site__section">
           <h2 className="site__section-heading">A User-Centered Universe</h2>

@@ -10,15 +10,43 @@ import '../page-assets/who-i-am/styles/who-i-am.sass'
 import ruralNerdImage from '../page-assets/who-i-am/images/rural-nerd.jpg'
 
 import Layout from '../components/layout'
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 const WhoIAmPage = () => {
+
+  const bgImageData = useStaticQuery(graphql`
+  query WhoIAmQuery {
+    desktop: file(relativePath: { eq: "who-i-am/images/kristopher-roller-188180.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "who-i-am/images/kristopher-roller-188180--mobile.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
 
     var cornerstoneStartDate = moment('2013-02-19')
     var telecommute_years = moment().diff(cornerstoneStartDate, 'years')
 
     return (
       <Layout>
-        <section className="who-banner">
+        <BackgroundImage Tag="section" className="who-banner" fluid={imageSources}>
           <div className="site__page-width">
             <AnimatedHeading
               headingText="Who I Am"
@@ -29,7 +57,7 @@ const WhoIAmPage = () => {
               image_url="http://unsplash.com/@krisroller?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
             />
           </div>
-        </section>
+        </BackgroundImage>
         <section className="site__section">
           <p className="site__paragraph-text">
             I’m a creative, good-humored guy who cares a lot about user-friendly

@@ -1,11 +1,11 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Eric Johnson's Portfolio`,
   },
   plugins: [
-      {
-        resolve: `gatsby-plugin-react-helmet`,
-      },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -32,8 +32,15 @@ module.exports = {
     //           }
     //       }
     //   },
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-sass`
-    }
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `page-assets`),
+      },
+    },
   ]
 }

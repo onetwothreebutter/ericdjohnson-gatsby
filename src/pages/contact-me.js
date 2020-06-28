@@ -12,8 +12,36 @@ import PhoneIcon from '../page-assets/contact-me/images/cell-phone.inline.svg'
 import linkedInIcon from '../page-assets/contact-me/images/In-Black-81px-R--colored.png'
 
 import Layout from '../components/layout'
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 const ContactMePage = () => {
+
+  const bgImageData = useStaticQuery(graphql`
+  query ContactMeQuery {
+    desktop: file(relativePath: { eq: "contact-me/images/hello-i-m-nik-281498.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "contact-me/images/hello-i-m-nik-281498.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
 
     const resumeStyle = {
       width: '100%',
@@ -23,7 +51,7 @@ const ContactMePage = () => {
 
     return (
       <Layout>
-        <section className="resume-banner">
+        <BackgroundImage Tag="section" className="resume-banner" fluid={imageSources}>
           <div className="site__page-width">
             <AnimatedHeading
               headingText="Resume"
@@ -34,7 +62,7 @@ const ContactMePage = () => {
               image_url="http://unsplash.com/@helloimnik?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
             />
           </div>
-        </section>
+        </BackgroundImage>
 
         <section className="site__section">
           <h2 className="site__section-heading">Resume</h2>

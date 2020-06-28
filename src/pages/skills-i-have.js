@@ -20,9 +20,40 @@ import svgAnimationImage from '../page-assets/skills-i-have/images/svg-animation
 import jsGoodPartsImage from '../page-assets/skills-i-have/images/js-good-parts-frontend-masters.jpg'
 import introReactImage from '../page-assets/skills-i-have/images/intro-to-react-frontend-masters.jpg'
 import cutoutImage from '../page-assets/skills-i-have/images/cardboard-cutout.jpg'
+
 import Layout from '../components/layout'
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 const SkillsIHavePage = (props) => {
+
+
+  const bgImageData = useStaticQuery(graphql`
+  query SkillsIHaveQuery {
+    desktop: file(relativePath: { eq: "skills-i-have/images/jakob-owens-299038.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "skills-i-have/images/jakob-owens-299038--mobile.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
+
   // console.log(props);
   // if (props.mocks) {
   //   skillsIHaveInit = props.mocks.skillsIHaveInit || skillsIHaveInit
@@ -34,7 +65,7 @@ const SkillsIHavePage = (props) => {
 
     return (
       <Layout>
-        <section className="skills-banner">
+        <BackgroundImage Tag='section' className="skills-banner" fluid={imageSources}>
           <div className="skills-banner__page-width">
             <AnimatedHeading
               headingText="Skills I Have"
@@ -50,7 +81,7 @@ const SkillsIHavePage = (props) => {
             className="skills-banner__water-effect-target-image"
             src={waterEffectImage}
           />
-        </section>
+        </BackgroundImage>
         <section className="site__section">
           <div className="site__page-width">
             <h2 className="site__section-heading">Web Skills</h2>

@@ -8,11 +8,41 @@ import NewtonsCradle from '../../page-assets/work-ive-done/images/newtons-cradle
 
 import '../../page-assets/work-ive-done/styles/work-ive-done.sass'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
+import BackgroundImage from 'gatsby-background-image'
+
 const WorkIveDonePage = () => {
+
+  const bgImageData = useStaticQuery(graphql`
+  query WorkIveDoneQuery {
+    desktop: file(relativePath: { eq: "work-ive-done/images/michal-grosicki-221225.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mobile: file(relativePath: { eq: "work-ive-done/images/michal-grosicki-221225--mobile.jpg"  }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 400) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }`);
+
+  const imageSources = [
+    bgImageData.mobile.childImageSharp.fluid,
+    {
+      ...bgImageData.desktop.childImageSharp.fluid,
+      media: `(min-width: 400px)`,
+    }
+  ];
 
     return (
       <Layout>
-        <section className="work-banner">
+        <BackgroundImage Tag="section" className="work-banner" fluid={imageSources}>
           <div className="work__page-width">
             <AnimatedHeading
               headingText="Work I've Done"
@@ -23,7 +53,7 @@ const WorkIveDonePage = () => {
               image_url="http://unsplash.com/@groosheck?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
             />
           </div>
-        </section>
+        </BackgroundImage>
 
         <section className="work-tiles">
           <WorkTile

@@ -7,7 +7,6 @@ try {
 } catch (e) {
   console.log(e)
 }
-import imagesLoaded from 'imagesloaded'
 
 //assets
 import footSound from '../files/foot-sound-effect.mp3'
