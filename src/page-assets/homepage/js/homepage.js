@@ -1,12 +1,4 @@
 import $ from 'jquery'
-import { TimelineMax } from 'gsap'
-//imclude Draggable this way to avoid error during server side rendering
-// because it requires "navigator" in scope and `gatsby build` won't work
-try {
-  var Draggable = require('gsap/Draggable')
-} catch (e) {
-  console.log(e)
-}
 
 //assets
 import footSound from '../files/foot-sound-effect.mp3'
@@ -14,6 +6,7 @@ import cartoonPopSound from '../files/cartoon-pop-sound.mp3'
 import stretchingSound from '../files/stretching-sound.mp3'
 
 export default function HomePage() {
+
   var $appendage
   var $homepageContainer
 
@@ -60,7 +53,7 @@ export default function HomePage() {
       youtubePlayer = new YT.Player('easter-egg__video', {
         height: '315',
         width: '419',
-        videoId: '-rutX0I6NxU',
+        videoId: '2AxiATxLofk',
         events: {
           onStateChange: HomePage.onPlayerStateChange,
         },

@@ -17,9 +17,9 @@ export default function HTML(props) {
           rel="stylesheet"
         ></link>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script>
-          console.log('aaaa');
-        </script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/Draggable.min.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EasePack.min.js"></script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

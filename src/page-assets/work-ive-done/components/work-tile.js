@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
-import { TimelineMax } from 'gsap'
 import $ from 'jquery'
 
 class WorkTile extends React.Component {
