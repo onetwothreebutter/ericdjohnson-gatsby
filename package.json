@@ -10,7 +10,7 @@
     "canvas": "^2.6.1",
     "charming": "^3.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "gatsby": "^2.13.68",
+    "gatsby": "^2.24.85",
     "gatsby-background-image": "^1.1.1",
     "gatsby-link": "^2.2.5",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -22,9 +22,9 @@
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-sharp": "^2.5.7",
     "imagesloaded": "^4.1.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "moment": "^2.24.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "number-to-words": "^1.2.4",
     "pixi.js": "^5.1.1",
     "raw-loader": "^3.1.0",
@@ -66,6 +66,6 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0",
-    "resolve-url-loader": "^3.1.0"
+    "resolve-url-loader": "^3.1.2"
   }
 }
