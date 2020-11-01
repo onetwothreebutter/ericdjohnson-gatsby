@@ -1,70 +1,57 @@
-// "use strict";
 //
-// var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
+// exports.createPages = async ({ actions, graphql }) => {
+//     const { createPage } = actions;
 //
-// var _require = require(`gatsby-1-config-css-modules`),
-//     cssModulesConfig = _require.cssModulesConfig;
+//     const createPagesFromSanity = ({ component = '', pages = [], type }) => {
+//         forEachPage(pages, edge => {
+//             try {
+//                 createPage({
+//                     path: `${edge.node.route.slug.current}`,
+//                     component: path.resolve(component),
+//                     context: {
+//                         slug: edge.node.route.slug.current,
+//                     },
+//                 });
+//             } catch (e) {
+//                 console.error(`error with ${type} content`, e.message);
+//             }
+//         });
+//     };
 //
-// exports.modifyWebpackConfig = function (_ref, options) {
-//     var config = _ref.config,
-//         stage = _ref.stage;
-//
-//     var sassFiles = /\.s[ac]ss$/;
-//     var sassModulesFiles = /\.module\.s[ac]ss$/;
-//     options['sourceMap'] = 'sourceMap';
-//     var sassLoader = `sass?${JSON.stringify(options)}`;
-//
-//     config.merge({
-//         postcss(wp) {
-//             return [
-//                 require('postcss-cssnext')({ browsers: ['last 2 versions', '> 2%']}),
-//             ]
-//         },
-//     });
-//
-//     switch (stage) {
-//         case `develop`:
-//         {
-//             config.loader(`sass`, {
-//                 test: sassFiles,
-//                 exclude: sassModulesFiles,
-//                 loaders: [`style`, `css`, `resolve-url-loader`, `postcss`, sassLoader]
-//             });
-//             return config;
+//     const queryParams = `
+//     (filter: {route: {enabled: {eq: true}}}) {
+//       edges {
+//         node {
+//           _type
+//           route {
+//             slug {
+//               current
+//             }
+//           }
 //         }
-//         case `build-css`:
-//         {
-//             config.loader(`sass`, {
-//                 test: sassFiles,
-//                 exclude: sassModulesFiles,
-//                 loader: ExtractTextPlugin.extract([`css?minimize`, `resolve-url-loader`, `postcss`, sassLoader])
-//             });
-//
-//             config.loader(`sassModules`, {
-//                 test: sassModulesFiles,
-//                 loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), `resolve-url-loader`, sassLoader])
-//             });
-//             return config;
-//         }
-//         case `develop-html`:
-//         case `build-html`:
-//         case `build-javascript`:
-//         {
-//             config.loader(`sass`, {
-//                 test: sassFiles,
-//                 exclude: sassModulesFiles,
-//                 loader: `null`
-//             });
-//
-//             config.loader(`sassModules`, {
-//                 test: sassModulesFiles,
-//                 loader: ExtractTextPlugin.extract(`style`, [cssModulesConfig(stage), 'resolve-url-loader', sassLoader])
-//             });
-//             return config;
-//         }
-//         default:
-//         {
-//             return config;
-//         }
+//       }
 //     }
+//   `;
+//
+//
+//
+//
+//     const result = await graphql(`
+//   {
+//     allSanityHomepage ${queryParams}
+//
+//   }
+// `);
+//
+//     if (result.errors) {
+//         throw result.errors;
+//     }
+//
+//
+//     // Create generic pages
+//     createPagesFromSanity({
+//         pages: result.data.allSanityPage,
+//         type: 'page',
+//         component: 'src/components/templates/Page/Page.jsx',
+//     });
 // };

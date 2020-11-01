@@ -1,0 +1,29 @@
+@import ../../global/components/menu/styles/regular-page
+@import ../../global/styles/banner
+@import ../../global/styles/page-layout
+@import ../../global/styles/typography
+@import ../../global/styles/breakpoints
+@import ../../global/components/animated-heading/styles/animated-heading
+
+
+.blog-banner
+  @include site-banner()
+  background-repeat: no-repeat
+
+.blog__heading
+  @include site-banner__heading--animated(#737373)
+  .char
+    $total-chars: 6
+    @for $i from 0 through ($total-chars - 1)
+      &[style*="--char-index:#{$i}"], &[style*="--char-index: #{$i}"]
+        @include conan-letters($i, $total-chars)
+
+.blog__paragraph-text
+  @include site__paragraph-text()
+  width: 100vw
+  height: 140vw
+  @media screen and (min-width: 700px)
+    height: 960px
+  @media screen and (max-width: $tablet-portrait)
+    max-width: 100%
+

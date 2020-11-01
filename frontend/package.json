@@ -7,6 +7,7 @@
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@loadable/component": "^5.12.0",
+    "@sanity/block-content-to-react": "^2.0.7",
     "canvas": "^2.6.1",
     "charming": "^3.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -20,6 +21,7 @@
     "gatsby-plugin-sass": "^2.1.10",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.7",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.5.1",
