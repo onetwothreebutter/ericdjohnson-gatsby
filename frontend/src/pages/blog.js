@@ -44,7 +44,7 @@ export const blogIndexPageQuery = graphql`
         }
       }
     }
-      allSanityPost {
+    allSanityPost(sort: {order: DESC, fields: publishedAt}) {
         edges {
           node {
             title
@@ -57,7 +57,7 @@ export const blogIndexPageQuery = graphql`
           }
         }
       }
-      }`;
+    }`;
 
 const BlogIndexPage = ({data, ...props}) => {
 
@@ -94,7 +94,7 @@ console.log(data, props);
                         ${urlFor(_rawMainImage).width(600).dpr(2).url()} 2x`
                         }
                              src={urlFor(_rawMainImage).width(300).url()}/>
-                        <BlockContent blocks={_rawBody}/>
+                        <BlockContent className="blog-post__content" blocks={_rawBody}/>
                     </div>
 
                 </div>
