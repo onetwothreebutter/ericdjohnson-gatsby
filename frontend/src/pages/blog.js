@@ -80,7 +80,6 @@ console.log(data, props);
     const renderPosts = (posts) => {
         return posts.map(({node}) => {
             const {title, _rawSlug, _rawBody, _rawMainImage, publishedAt} = node;
-            console.log("_rawBody", _rawBody);
             const formattedPublish = differenceInDays(new Date(), new Date(publishedAt)) >= 1 ?
                  format(new Date(publishedAt), 'MMM dd, y') : formatDistance(new Date(publishedAt), new Date());
             return (
@@ -88,7 +87,7 @@ console.log(data, props);
 
                     <div>
                         <h2 className="blog-post__title">{title}</h2>
-                        <div>{formattedPublish}</div>
+                        <div className="blog-post__date">{formattedPublish}</div>
                         <img className="blog-post__image" srcSet={
                             `${urlFor(_rawMainImage).width(600).dpr(1).url()} 1x,
                         ${urlFor(_rawMainImage).width(600).dpr(2).url()} 2x`
