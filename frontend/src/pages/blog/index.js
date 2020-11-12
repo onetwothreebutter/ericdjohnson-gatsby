@@ -1,29 +1,16 @@
 import React, { useEffect } from 'react'
-import AnimatedHeading from '../page-assets/global/components/animated-heading/loadable-animated-heading'
-import PhotoCredit from '../page-assets/global/components/photo-credit'
-import BlockContent from '@sanity/block-content-to-react'
-import sanityClient from '@sanity/client'
-import sanityJson from '../../../backend/sanity.json'
-import imageUrlBuilder from '@sanity/image-url'
-import { formatDistance, differenceInDays, format } from 'date-fns'
+import AnimatedHeading from '../../page-assets/global/components/animated-heading/loadable-animated-heading'
+import PhotoCredit from '../../page-assets/global/components/photo-credit'
+import BlogPost from '../../components/blog/blog-post'
 
 //styles
-import '../page-assets/blog/styles/blog.sass'
+import '../../page-assets/blog/styles/blog.sass'
 
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import GatsbyLink from "gatsby-link";
 
-const client = sanityClient({
-    projectId: sanityJson.api.projectId,
-    dataset: sanityJson.api.dataset,
-    useCdn: true // `false` if you want to ensure fresh data
-});
-const builder = imageUrlBuilder(client)
-
-function urlFor(source) {
-    return builder.image(source)
-}
 
 
 
@@ -73,40 +60,24 @@ console.log(data, props);
         }
     ];
 
-    console.log('allSanityPost',allSanityPost);
-
-
-
     const renderPosts = (posts) => {
         return posts.map(({node}) => {
-            const {title, _rawSlug, _rawBody, _rawMainImage, publishedAt} = node;
-            const formattedPublish = differenceInDays(new Date(), new Date(publishedAt)) >= 1 ?
-                 format(new Date(publishedAt), 'MMM dd, y') : formatDistance(new Date(publishedAt), new Date());
-            return (
-                <div className="blog-post">
-
-                    <div>
-                        <h2 className="blog-post__title">{title}</h2>
-                        <div className="blog-post__date">{formattedPublish}</div>
-                        <img className="blog-post__image" srcSet={
-                            `${urlFor(_rawMainImage).width(600).dpr(1).url()} 1x,
-                        ${urlFor(_rawMainImage).width(600).dpr(2).url()} 2x`
-                        }
-                             src={urlFor(_rawMainImage).width(300).url()}/>
-                        <BlockContent className="blog-post__content" blocks={_rawBody}/>
-                    </div>
-
-                </div>
-            )
-        })
-    }
+            return <BlogPost postData={node}/>;
+        });
+    };
+//CONJECTURE JUNCTION
+    //BRAIN TAP
+    //BRAIN DUMP
+    //NEXUS
+    //EJ NEXUS
+    //ERIC WIDE WEB (EWW Blog)
 
     return (
         <Layout>
             <BackgroundImage Tag='section' className="blog-banner" fluid={imageSources}>
                 <div className="blog-banner__page-width">
                     <AnimatedHeading
-                        headingText="Blog"
+                        headingText="ERIC WIDE WEB (EWW Blog)"
                         headingClassName="blog__heading"
                     />
                     <PhotoCredit

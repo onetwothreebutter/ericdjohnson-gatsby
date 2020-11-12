@@ -1,57 +1,41 @@
-//
-// exports.createPages = async ({ actions, graphql }) => {
-//     const { createPage } = actions;
-//
-//     const createPagesFromSanity = ({ component = '', pages = [], type }) => {
-//         forEachPage(pages, edge => {
-//             try {
-//                 createPage({
-//                     path: `${edge.node.route.slug.current}`,
-//                     component: path.resolve(component),
-//                     context: {
-//                         slug: edge.node.route.slug.current,
-//                     },
-//                 });
-//             } catch (e) {
-//                 console.error(`error with ${type} content`, e.message);
-//             }
-//         });
-//     };
-//
-//     const queryParams = `
-//     (filter: {route: {enabled: {eq: true}}}) {
-//       edges {
-//         node {
-//           _type
-//           route {
-//             slug {
-//               current
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `;
-//
-//
-//
-//
-//     const result = await graphql(`
-//   {
-//     allSanityHomepage ${queryParams}
-//
-//   }
-// `);
-//
-//     if (result.errors) {
-//         throw result.errors;
-//     }
-//
-//
-//     // Create generic pages
-//     createPagesFromSanity({
-//         pages: result.data.allSanityPage,
-//         type: 'page',
-//         component: 'src/components/templates/Page/Page.jsx',
-//     });
-// };
+const path = require(`path`)
+
+exports.createPages = async ({ actions, graphql }) => {
+    const { createPage } = actions;
+
+
+
+    const result = await graphql(`
+      {
+        allSanityPost(sort: {order: DESC, fields: publishedAt}) {
+            edges {
+              node {
+                title
+                publishedAt
+                _rawMainImage(resolveReferences: {maxDepth: 10})
+                _rawSlug(resolveReferences: {maxDepth: 10})
+                _rawBody(resolveReferences: {maxDepth: 10})
+                _rawCategories(resolveReferences: {maxDepth: 10})
+                _rawAuthor(resolveReferences: {maxDepth: 10})
+              }
+            }
+          }    
+      }
+    `);
+
+    if (result.errors) {
+        throw result.errors;
+    }
+
+    console.log(result.data.allSanityPost.edges);
+
+    result.data.allSanityPost.edges.forEach(({node}) => {
+        createPage({
+            path: node._rawSlug.current,
+            component: path.resolve('src/components/blog/blog-post-page.js'),
+            context: {
+                postData: node
+            }
+        });
+    });
+};
