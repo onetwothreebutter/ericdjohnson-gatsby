@@ -77,7 +77,7 @@ console.log(data, props);
             <BackgroundImage Tag='section' className="blog-banner" fluid={imageSources}>
                 <div className="blog-banner__page-width">
                     <AnimatedHeading
-                        headingText="ERIC WIDE WEB (EWW Blog)"
+                        headingText="EJ Blog"
                         headingClassName="blog__heading"
                     />
                     <PhotoCredit
