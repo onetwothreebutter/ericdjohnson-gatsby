@@ -27,8 +27,6 @@ exports.createPages = async ({ actions, graphql }) => {
         throw result.errors;
     }
 
-    console.log(result.data.allSanityPost.edges);
-
     result.data.allSanityPost.edges.forEach(({node}) => {
         createPage({
             path: node._rawSlug.current,

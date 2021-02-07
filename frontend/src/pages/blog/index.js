@@ -48,7 +48,6 @@ export const blogIndexPageQuery = graphql`
 
 const BlogIndexPage = ({data, ...props}) => {
 
-console.log(data, props);
 
     const { desktopBgImage, mobileBgImage, allSanityPost} = data;
 
