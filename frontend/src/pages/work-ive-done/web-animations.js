@@ -37,6 +37,21 @@ const WebAnimationsPage = () => {
         <hr className="section-divider" />
 
         <section className="site__section">
+          <h2 className="site__section-heading">Shy Hedgehog</h2>
+          <p className="site__paragraph-text">
+            My friends have an online pen shop, and I created an animation for their hedgehog mascot.
+          </p>
+          <div className="web-animations__codepen-embed">
+            <div className="web-animations__instructions">
+              hover the hedgehog!
+            </div>
+            <Codepen {...codependProps} hash="GRoNxMg" />
+          </div>
+        </section>
+
+        <hr className="section-divider" />
+
+        <section className="site__section">
           <h2 className="site__section-heading">SVG Icon Animations</h2>
           <p className="site__paragraph-text">
             At Cornerstone, our marketing website needed to feel more alive,
