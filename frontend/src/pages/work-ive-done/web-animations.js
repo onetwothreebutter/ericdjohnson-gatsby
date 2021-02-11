@@ -36,6 +36,32 @@ const WebAnimationsPage = () => {
 
         <hr className="section-divider" />
 
+      <section className="site__section">
+          <h2 className="site__section-heading">Cornerstone AI Banner</h2>
+          <p className="site__paragraph-text">
+              I created a particle wave animation using Three.js and implemented a new way of creating a
+              Cornerstone-branded gradient across the particles. Additionally, I created a floating animation
+              for the people bubbles that fit well with the motion of the particle wave.
+          </p>
+          <div className="web-animations__codepen-embed">
+              <Codepen {...codependProps} hash="QWGGayW" />
+          </div>
+      </section>
+
+      <hr className="section-divider" />
+
+        <section className="site__section">
+          <h2 className="site__section-heading">Cornerstone Alchemy Concept</h2>
+          <p className="site__paragraph-text">
+            I was impressed with a CoDrops article titled "Ambient Canvas Backgrounds" and I thought I'd tweak it to see what it'd be like for the company I work for, Cornerstone Ondemand. Basically, I just figured out how to draw a trapezoid that is similar in shape to Cornerstone's logo, and then changed the colors of the "particles/trapezoids" to match Cornerstone's brand colors.
+          </p>
+          <div className="web-animations__codepen-embed">
+            <Codepen {...codependProps} hash="vbYqQP" />
+          </div>
+        </section>
+
+        <hr className="section-divider" />
+
         <section className="site__section">
           <h2 className="site__section-heading">Shy Hedgehog</h2>
           <p className="site__paragraph-text">
