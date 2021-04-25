@@ -57,32 +57,41 @@ const WhatImLookingForPage = () => {
           </div>
         </BackgroundImage>
 
+      <section className="site__section">
+          <h2 className="site__section-heading">Motion Design</h2>
+          <p className="site__paragraph-text">
+              I love implementing motion designs on the web and imagining ways in which a static design can be animated.
+              Motion is fundamental to how people understand the physical environment around them. Our brains have a dedicated
+              visual processing center (similar to a GPU!) that can process user interfaces seamlessly and free up our conscious mind
+              to stay focused on the larger task (eg, completing a checkout process or learning about something new).
+              However, if the motion doesn't "feel real", is unexpected, or is too extreme, our brain's GPU interrupts our conscious mind to
+              figure out what's going on. I'm passionate getting motion design right and I get great satisfaction tweaking
+              easing curves until the UI animation feels as natural possible. I'm looking for opportunities to
+              work with people who are as excited about motion as I am.
+          </p>
+      </section>
+
+          <section className="site__section">
+              <h2 className="site__section-heading">Pixel Perfection</h2>
+              <p className="site__paragraph-text">
+                  I have a great design eye and I love figuring out what CSS and media queries (and sometimes JS) I need
+                  to bring a designer's vision
+                  to life. Spacing issues are a big deal to me (I use a page ruler browser plugin to check my work),
+                  I know that the right gray depends on the colors in use around it,
+                  and too much content on the screen at once is like nails
+                  on a chalkboard. I want to work with people who are passionate about making stunning designs so I can build stunning
+                  web experiences.
+              </p>
+          </section>
+
         <section className="site__section">
           <h2 className="site__section-heading">A User-Centered Universe</h2>
           <p className="site__paragraph-text">
             I'm happiest and most productive when I'm working on user-facing
-            interfaces or trying to improve a design for the user. I get
-            dispirited when I see content or functionality on our websites that
-            I know is not as user-friendly as it could be. I want a workplace
+            interfaces or trying to improve a design for the user. I want a workplace
             where everyone understands how easy it is to get out of sync with
             the user's needs, and is careful to think about everything in the
             user's frame of reference.
-          </p>
-        </section>
-
-        <hr className="section-divider" />
-
-        <section className="site__section">
-          <h2 className="site__section-heading">
-            The Sweet Embrace of Open Minds
-          </h2>
-          <p className="site__paragraph-text">
-            Brainstorming ideas makes me happy. But sharing ideas is often
-            difficult; everyone is busy, or interpersonal and hierarchical
-            dynamics inhibit idea sharing. Basic human traits like aversion to
-            the new and different result in a "shoot-down" response. I want a
-            workplace where everyone is brainstorming like mad and invigorated
-            by new ideas.
           </p>
         </section>
 
