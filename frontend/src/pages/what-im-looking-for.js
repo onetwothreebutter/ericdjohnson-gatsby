@@ -64,7 +64,9 @@ const WhatImLookingForPage = () => {
               Motion is fundamental to how people understand the physical environment around them. Our brains have a dedicated
               visual processing center (similar to a GPU!) that can process user interfaces seamlessly and free up our conscious mind
               to stay focused on the larger task (eg, completing a checkout process or learning about something new).
-              However, if the motion doesn't "feel real", is unexpected, or is too extreme, our brain's GPU interrupts our conscious mind to
+          </p>
+          <p className="site__paragraph-text">
+                  However, if the motion doesn't "feel real", is unexpected, or is too extreme, our brain's GPU interrupts our conscious mind to
               figure out what's going on. I'm passionate getting motion design right and I get great satisfaction tweaking
               easing curves until the UI animation feels as natural possible. I'm looking for opportunities to
               work with people who are as excited about motion as I am.
