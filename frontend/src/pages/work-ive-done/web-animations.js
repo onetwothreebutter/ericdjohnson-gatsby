@@ -36,6 +36,35 @@ const WebAnimationsPage = () => {
 
         <hr className="section-divider" />
 
+        <section className="site__section">
+          <h2 className="site__section-heading">Scroll Flower [beta]</h2>
+          <p className="site__paragraph-text">
+            I took a scrolling animation technique developed by Apple and used it to create a daffodil that
+            blossoms as you scroll. [beta: the loading experience is rough and takes 20s on my connection, and it's only marginally responsive]
+          </p>
+          <div className="work-example__button-container">
+            <a
+                className="site__button"
+                href="https://scroll-flower.netlify.app/"
+                target="_blank"
+            >
+              Scroll Flower website
+            </a>
+          </div>
+          <div className="work-example__button-container">
+            <a
+                className="site__button"
+                href="https://github.com/onetwothreebutter/scroll-flower"
+                target="_blank"
+            >
+              Scroll Flower code
+            </a>
+          </div>
+
+        </section>
+
+        <hr className="section-divider" />
+
       <section className="site__section">
           <h2 className="site__section-heading">Cornerstone AI Banner</h2>
           <p className="site__paragraph-text">
